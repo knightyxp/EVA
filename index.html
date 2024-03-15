@@ -163,155 +163,349 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<!-- Paper poster -->
+<section class="hero">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+        
+          <strong>Observations:</strong> We observe that semantic point correspondence can be learned from just a small number of video frames (8 frames in this example). The learned semantic points can<br/>
+          <ol>
+            <li> align the subject motion trajectory and change the subject shape. </li>
+            <li> transfer across semantic and low-level changes. </li>
+          </ol>
           
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="is-centered has-text-centered video-no-container">
+            <video preload="auto" poster="" autoplay controls muted loop width="600px" outline="0px"> 
+              <source src="static/assets/observation.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          
+          <hr>
+          <strong>VideoSwap: Set up semantic points:</strong> 
+          Motivated by our observations, we introduce semantic point correspondence in the VideoSwap framework. 
+          We first set up user-defined semantic points by<br/>
+          <ol>
+            <li> extracting their trajectory and semantic embedding. </li>
+            <li> registering them on the source video. </li>
+          </ol>
+          <img src="static/assets/pipeline.png" alt="" width="1000" />
+          
+          <hr>
+
+          <strong>VideoSwap: Guide the motion trajectory by semantic points:</strong> 
+
+          After setting up semantic points, we guide the motion trajectory of swapped targets with the following three types of correspondence:
+          <ol>
+            <li>One-to-One Point Correspondence. </li>
+            <li>Partial Point Correspondence. </li>
+            <li>Point Correspondence with Shape Morphing.</li>
+          </ol>
+          <div class="is-centered has-text-centered video-no-container">
+            <video preload="auto"poster="" id="tree" autoplay controls muted loop width="1000px" outline="0px"> 
+              <source src="static/assets/interaction.mp4"
+              type="video/mp4">
+            </video>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!--End paper poster -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results (<a href="./supplementary/videoswap_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Results</a>)</h2>
+        <div class="content has-text-justified">
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
+          <table width="1000" align="center">
+            <tbody>
+              <tr>
+                <td style="vertical-align: middle;"><p style="font-family: Chalkduster;" align="center"><a style="color: black;"><strong> Reference Images for Customized Concepts: </strong></p></td>
+                <td><img height="200" src="./static/assets/concept.png" alt="Reference of the customized conecpts"></t>  
+              </tr>
+            </tbody>
+          </table> 
+
+          <strong>1. Customized Swapping Results (One-to-One Point Correspondence)</strong>
+
+          <p>&nbsp;</p>
+
+          <table width="1000" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;"> <a style="font-family: caveat; font-size: 25px; font-weight: bold;">Source Video</a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
+              <tr>
+              <tr>
+                <td><video id="master3" width="300" src="./supplementary/assets/qualitative_results/animal/1_catheadturn_2001/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+                <td><video data-master-id="master3" width="300" src="./supplementary/assets/qualitative_results/animal/1_catheadturn_2001/9_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+                <td><video data-master-id="master3" width="300" src="./supplementary/assets/qualitative_results/animal/1_catheadturn_2001/11_V_dogA.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+                <td><video data-master-id="master3" width="300" src="./supplementary/assets/qualitative_results/animal/1_catheadturn_2001/10_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <strong>2. Customized Swapping Results (Partial Point Correspondence)</strong>
+
+          <p>&nbsp;</p>
+
+          <table width="1000" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;"> <a style="font-family: caveat; font-size: 25px; font-weight: bold;">Source Video</a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">airplane</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>jet</sup></a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">airplane</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">helicopter</a> </th>
+              <tr>
+              <tr>
+                <td><video id="master5" width="300" src="./supplementary/assets/qualitative_results/object/3_airplane_ss1056_3004/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+                <td><video data-master-id="master5" width="300" src="./supplementary/assets/qualitative_results/object/3_airplane_ss1056_3004/7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+                <td><video data-master-id="master5" width="300" src="./supplementary/assets/qualitative_results/object/3_airplane_ss1056_3004/6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <strong>3. Customized Swapping Results (Interative Drag for Point Correspondence with Shape Morphing)</strong>
+          
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              
+              <tr>
+                <th rowspan=4 style="vertical-align: middle; text-align: center;">
+                  Keyframe <br> 
+                  <img width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_keyframe.png" alt="Reference of the customized conecpts"> <br>
+                  Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">black swan</a> swimming in a pond." <br>
+                  Target Swap: <a style="color: blue; font-family: caveat; font-size: 25px;">black swan</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;">duck</a>
+                </th>
+                <th style="vertical-align: middle; text-align: center;">Source Point Trajectory </th>
+                <th style="vertical-align: middle; text-align: center;">Result Guided by Source Point Trajectory</th>
+              </tr>
+  
+              <tr>
+                <th><video id="master26" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_source_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master26" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_source_6_duck_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              
+              <tr>
+                <th style="vertical-align: middle; text-align: center;">Dragged Point Trajectory </th>
+                <th style="vertical-align: middle; text-align: center;">Result Guided by Dragged Point Trajectory</th>
+              </tr>
+  
+              <tr>
+                <th><video data-master-id="master26" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_drag_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master26" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_drag_6_duck_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+
+              <tr>
+                <th rowspan=4 style="vertical-align: middle; text-align: center;">
+                  Keyframe <br> 
+                  <img width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_keyframe.png" alt="Reference of the customized conecpts"> <br>
+                  Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside." <br>
+                Target Swap: <a style="color: blue; font-family: caveat; font-size: 25px;">silver jeep</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;">V <sup>carA</sup></a>
+                </th>
+                <th style="vertical-align: middle; text-align: center;">Source Point Trajectory </th>
+                <th style="vertical-align: middle; text-align: center;">Result Guided by Source Point Trajectory</th>
+              </tr>
+  
+              <tr>
+                <th><video id="master30" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_source_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master30" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_source_carA_vis.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              
+              <tr>
+                <th style="vertical-align: middle; text-align: center;">Dragged Point Trajectory </th>
+                <th style="vertical-align: middle; text-align: center;">Result Guided by Dragged Point Trajectory</th>
+              </tr>
+  
+              <tr>
+                <th><video data-master-id="master30" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_drag_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master30" width="300" src="./supplementary/assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_drag_carA_vis.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+  
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/ Abstract. -->    
+</section>
+
+<!-- Paper poster -->
+<section class="hero">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Comparison (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Comparison</a>)</h2>
+          <div class="content has-text-justified">
+
+          Previous video-editing methods are <strong> not effective in revealing the real shape </strong> of target concept: <br/>
+            
+          <div class="has-text-centered">
+          <img src="static/assets/predefine_concept.png" alt="" width="600" /> <br/>
+          </div>
+
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Source Prompt:</strong> "An <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> flying above the clouds in the sky." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> -> <a style="color: purple; font-family: caveat; font-size: 22px; font-weight: bold;">helicopter</a> <br/>
+          </div>
+
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
+                <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/source_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/videoswap_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/rerender_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/tokenflow_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
+                <th style="width: 150px; text-align: center;">StableVideo</th>
+                <th style="width: 150px; text-align: center;">Tune-A-Video</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+              </tr>
+              <tr>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/t2v_zero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/stablevideo_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/tune_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/3004_6_helicopter/fatezero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Source Prompt:</strong> "A <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">black swan</a> swimming in a pond." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">black swan</a> -> <a style="color: purple; font-family: caveat; font-size: 25px; font-weight: bold;">duck</a> <br/>
+            </div>
+  
+            <table width="1200" align="center" class="video-no-container">
+              <tbody>
+                <tr>
+                  <th style="width: 150px; text-align: center;">Source Video</th>
+                  <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
+                  <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
+                  <th style="width: 150px; text-align: center;">TokenFlow</th>
+                </tr>
+                <tr>
+                  <th><video id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/videoswap_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/rerender_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tokenflow_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+              </tbody>
+            </table>
+            <table width="1200" align="center" class="video-no-container">
+              <tbody>
+                <tr>
+                  <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
+                  <th style="width: 150px; text-align: center;">StableVideo</th>
+                  <th style="width: 150px; text-align: center;">Tune-A-Video</th>
+                  <th style="width: 150px; text-align: center;">FateZero</th>
+                </tr>
+                <tr>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/t2v_zero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/stablevideo_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tune_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/fatezero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
 <!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{gu2023videoswap,
+  author    = {Gu, Yuchao and Zhou, Yipin and Wu, Bichen and Yu, Licheng and Liu, Jia-Wei and Zhao, Rui and Wu, Jay Zhangjie and Zhang, David Junhao and Shou, Mike Zheng and Tang, Kevin},
+  title     = {VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence},
+  journal   = {arXiv preprint},
+  year      = {2023},
+}</code></pre>
+  </div>
 </section>
-<!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
+<footer class="footer">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
+<script>
+  window.onload = function () {
+    // Sync function
+    function syncVideos(master, slaves) {
+      master.addEventListener('play', () => {
+        slaves.forEach(video => {
+          video.currentTime = master.currentTime;
+          video.play();
+        });
+      });
+
+      master.addEventListener('pause', () => {
+        slaves.forEach(video => video.pause());
+      });
+
+      master.addEventListener('seeked', () => {
+        slaves.forEach(video => {
+          video.currentTime = master.currentTime;
+        });
+      });
+    }
+
+    // Sync setup for all masters
+    document.querySelectorAll('[id^="master"]').forEach(masterVideo => {
+      const masterId = masterVideo.getAttribute('id');
+      const slaveVideos = Array.from(document.querySelectorAll(`[data-master-id="${masterId}"]`));
+      syncVideos(masterVideo, slaveVideos);
+    });
+  };
   
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+</script>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
