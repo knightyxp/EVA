@@ -89,17 +89,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -172,46 +161,31 @@
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
         
-          <strong>Observations:</strong> We observe that semantic point correspondence can be learned from just a small number of video frames (8 frames in this example). The learned semantic points can<br/>
+          <strong>Intrinsic Cross-frame DIFT feature correspondence :</strong> We observe that, we can unsupervised identify intra/inter attributes using cross-frame DIFT correspondence.
+          For each query token, we can:
           <ol>
-            <li> align the subject motion trajectory and change the subject shape. </li>
-            <li> transfer across semantic and low-level changes. </li>
+           <li> Maximizing the cosine cross-frame DIFT similarity to identify its corresponding positive pair in other frames (sharing the same attribute). 
+           <li> Minimizing this similarity to find its negative pair (across different attributes).
           </ol>
+          <img src="static/images/cross-frame-dift-feature.pdf" alt="" width="1000" />
           
-          <div class="is-centered has-text-centered video-no-container">
-            <video preload="auto" poster="" autoplay controls muted loop width="600px" outline="0px"> 
-              <source src="static/assets/observation.mp4"
-              type="video/mp4">
-            </video>
-          </div>
+
           
           <hr>
-          <strong>VideoSwap: Set up semantic points:</strong> 
-          Motivated by our observations, we introduce semantic point correspondence in the VideoSwap framework. 
-          We first set up user-defined semantic points by<br/>
+          <strong>EVA pipeline:</strong> 
+          EVA pipeline. We integrate the ST-Layout Attn within the frozen SD in the denoising
+          process. In the self-attention layer, we compute the positive/negative value of each query token in
+          different attributes from a spatial-temporal perspective, This allows us to augment the attention
+          scores for tokens within the same attribute and reduce them for tokens in different attributes.
+          In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt,
+          ensuring they focus only on corresponding layouts across frames.<br/>
           <ol>
             <li> extracting their trajectory and semantic embedding. </li>
             <li> registering them on the source video. </li>
           </ol>
-          <img src="static/assets/pipeline.png" alt="" width="1000" />
+          <img src="static/images/framework-v2.png" alt="" width="1000" />
           
           <hr>
-
-          <strong>VideoSwap: Guide the motion trajectory by semantic points:</strong> 
-
-          After setting up semantic points, we guide the motion trajectory of swapped targets with the following three types of correspondence:
-          <ol>
-            <li>One-to-One Point Correspondence. </li>
-            <li>Partial Point Correspondence. </li>
-            <li>Point Correspondence with Shape Morphing.</li>
-          </ol>
-          <div class="is-centered has-text-centered video-no-container">
-            <video preload="auto"poster="" id="tree" autoplay controls muted loop width="1000px" outline="0px"> 
-              <source src="static/assets/interaction.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          </div>
         </div>
       </div>
     </div>
