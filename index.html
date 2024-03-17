@@ -174,23 +174,17 @@
               type="video/mp4">
             </video>
           </div>
+          <table width="800" border="0">
+            <tbody>
+              <tr>
+                <td>
+                  <strong>EVA pipeline:</strong> We integrate the ST-Layout Attn within the frozen SD in the denoising process. In the self-attention layer, we compute the positive/negative value of each query token in different attributes from a spatial-temporal perspective. This allows us to augment the attention scores for tokens within the same attribute and reduce them for tokens in different attributes. In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt, ensuring they focus only on corresponding layouts across frames.<br/>
+                  <img src="static/images/framework-v2.png" alt="" style="margin-top: 10px;"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           
-          <hr>
-          <strong>EVA pipeline:</strong> 
-
-          <!-- 把图片放在描述文字之前 -->
-          <img src="static/assets/pipeline.png" alt="" style="max-width: 100%; height: auto;" />
-          
-          <p>
-            EVA pipeline. We integrate the ST-Layout Attn within the frozen SD in the denoising
-            process. In the self-attention layer, we compute the positive/negative value of each query token in
-            different attributes from a spatial-temporal perspective, This allows us to augment the attention
-            scores for tokens within the same attribute and reduce them for tokens in different attributes.
-            In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt,
-            ensuring they focus only on corresponding layouts across frames.
-          </p>
-          
-          <hr>
         </div>
       </div>
     </div>
