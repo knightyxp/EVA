@@ -169,7 +169,7 @@
           </ol>
           
           <div class="is-centered has-text-centered video-no-container">
-            <video preload="auto" poster="" autoplay controls muted loop width="600px" outline="0px"> 
+            <video preload="auto" poster="" autoplay controls muted loop width="800px" outline="0px"> 
               <source src="static/videos/cross-frame-dift-new.mp4"
               type="video/mp4">
             </video>
@@ -177,17 +177,24 @@
           
           <hr>
           <strong>EVA pipeline:</strong> 
-          EVA pipeline. We integrate the ST-Layout Attn within the frozen SD in the denoising
-          process. In the self-attention layer, we compute the positive/negative value of each query token in
-          different attributes from a spatial-temporal perspective, This allows us to augment the attention
-          scores for tokens within the same attribute and reduce them for tokens in different attributes.
-          In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt,
-          ensuring they focus only on corresponding layouts across frames.<br/>
-          <ol>
-            <li> extracting their trajectory and semantic embedding. </li>
-            <li> registering them on the source video. </li>
-          </ol>
-          <img src="static/images/framework-v2.png" alt="" width="1500" />
+
+          <table width="800" border="0">
+            <tbody>
+              <tr>
+                <td colspan="3">
+                  <p>
+                    EVA pipeline. We integrate the ST-Layout Attn within the frozen SD in the denoising
+                    process. In the self-attention layer, we compute the positive/negative value of each query token in
+                    different attributes from a spatial-temporal perspective, This allows us to augment the attention
+                    scores for tokens within the same attribute and reduce them for tokens in different attributes.
+                    In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt,
+                    ensuring they focus only on corresponding layouts across frames.<br/>
+              </tr>
+                <img src="static/images/framework-v2.png" alt="pipeline"/>
+            </tbody>
+          </table>
+
+          <!-- <img src="static/images/framework-v2.png" alt="" width="1500" /> -->
           
           <hr>
         </div>
