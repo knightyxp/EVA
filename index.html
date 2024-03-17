@@ -184,7 +184,7 @@
               <tr>
                 <td colspan="3">
                   <p>
-                    EVA pipeline. We integrate the ST-Layout Attn within the frozen SD in the denoising
+                    We integrate the ST-Layout Attn within the frozen SD in the denoising
                     process. In the self-attention layer, we compute the positive/negative value of each query token in
                     different attributes from a spatial-temporal perspective, This allows us to augment the attention
                     scores for tokens within the same attribute and reduce them for tokens in different attributes.
@@ -206,27 +206,18 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Results (<a href="./supplementary/videoswap_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Results</a>)</h2>
+        <h2 class="title is-3">Results (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Results</a>)</h2>
         <div class="content has-text-justified">
 
 
-          <table width="1000" align="center">
-            <tbody>
-              <tr>
-                <td style="vertical-align: middle;"><p style="font-family: Chalkduster;" align="center"><a style="color: black;"><strong> Reference Images for Customized Concepts: </strong></p></td>
-                <td><img height="200" src="./static/assets/concept.png" alt="Reference of the customized conecpts"></t>  
-              </tr>
-            </tbody>
-          </table> 
-
-          <strong>1. Customized Swapping Results (One-to-One Point Correspondence)</strong>
+          <strong>1. Single-Object Multi-attribute Editing Results</strong>
 
           <p>&nbsp;</p>
 
           <table width="1000" align="center" class="video-no-container">
             <tbody>
               <tr>
-                <th style="width: 150px; text-align: center;"> <a style="font-family: caveat; font-size: 25px; font-weight: bold;">Source Video</a> </th>
+                <th style="width: 150px; text-align: center;"> <a style="font-family: caveat; font-size: 25px; font-weight: bold;">man</a> -> <a style="color: red; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">Batman</a>,  <a style="font-family: caveat; font-size: 25px; font-weight: bold;">clay court</a> -> <a style="color: lightblue; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">snow covered court</a>,  <a style="font-family: caveat; font-size: 25px; font-weight: bold;">stone wall</a> -> <a style="color: yellow; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">iced wall</a> </th>
                 <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
                 <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
                 <th style="width: 150px; text-align: center;"> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">kitten</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;  font-size: 25px; font-weight: bold;">V <sup>catA</sup></a> </th>
