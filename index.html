@@ -201,6 +201,112 @@
 <!--End paper poster -->
 
 
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Comparison (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Comparison</a>)</h2>
+          <div class="content has-text-justified">
+
+          Previous video-editing methods are <strong> not effective in revealing the real shape </strong> of target concept: <br/>
+            
+          <div class="has-text-centered">
+          <img src="static/assets/predefine_concept.png" alt="" width="600" /> <br/>
+          </div>
+
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Source Prompt:</strong> "An <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> flying above the clouds in the sky." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> -> <a style="color: purple; font-family: caveat; font-size: 22px; font-weight: bold;">helicopter</a> <br/>
+          </div>
+
+          <table width="2400" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
+                <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
+                <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/single_object/tennis_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/tennis_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/parour_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/parour_2cls_new.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/roller_blade_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/rollerblade_eva_batwoman.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/weightlifting_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/weightlifting_eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
+                <th style="width: 150px; text-align: center;">StableVideo</th>
+                <th style="width: 150px; text-align: center;">Tune-A-Video</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+              </tr>
+              <tr>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/roller_blade_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/rollerblade_eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/weightlifting_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/weightlifting_eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Source Prompt:</strong> "A <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">black swan</a> swimming in a pond." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">black swan</a> -> <a style="color: purple; font-family: caveat; font-size: 25px; font-weight: bold;">duck</a> <br/>
+            </div>
+  
+            <table width="1200" align="center" class="video-no-container">
+              <tbody>
+                <tr>
+                  <th style="width: 150px; text-align: center;">Source Video</th>
+                  <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
+                  <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
+                  <th style="width: 150px; text-align: center;">TokenFlow</th>
+                </tr>
+                <tr>
+                  <th><video id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/videoswap_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/rerender_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tokenflow_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+              </tbody>
+            </table>
+            <table width="1200" align="center" class="video-no-container">
+              <tbody>
+                <tr>
+                  <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
+                  <th style="width: 150px; text-align: center;">StableVideo</th>
+                  <th style="width: 150px; text-align: center;">Tune-A-Video</th>
+                  <th style="width: 150px; text-align: center;">FateZero</th>
+                </tr>
+                <tr>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/t2v_zero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/stablevideo_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tune_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/fatezero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
