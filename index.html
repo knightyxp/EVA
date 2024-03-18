@@ -372,15 +372,14 @@
           <h2 class="title is-3">Comparison (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Comparison</a>)</h2>
           <div class="content has-text-justified">
 
+            <div class="has-text-centered">
+              Previous video-editing methods failed in  <strong>1. accurate text-to-attribute control 2. avoiding attention leakage </strong> 
+            </div>
+
           <div class="has-text-centered">
             <strong><a style="color: black; font-size: 30px; font-weight: bold;">1.Single-Object Qualitative Comparison</a></strong>
           </div>
-
-          <div class="has-text-centered">
-            Previous video-editing methods failed in  <strong>1. accurate text-to-attribute control 2. avoiding attention leakage </strong> 
-          </div>
           
-  
           <div class="has-text-centered" style="background-color:cornsilk">
             <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">falling snow </a>sky <br/>
           </div>
@@ -397,21 +396,23 @@
               </tr>
               <tr>
                 <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/source_video_1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/groundvideo_3.mp4" autoplay=" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
           </table>
           <table width="1200" align="center" class="video-no-container">
             <tbody>
               <tr>
-                <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
-                <th style="width: 150px; text-align: center;">StableVideo</th>
-                <th style="width: 150px; text-align: center;">Tune-A-Video</th>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
                 <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
               </tr>
               <tr>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/roller_blade_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
