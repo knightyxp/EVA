@@ -363,144 +363,6 @@
 </section>
 
 
-
-
-<section class="hero is-small is-light">
-  <div class="hero-body">
-      <div class="container is-max-desktop">
-          <div class="columns is-centered has-text-centered">
-              <div class="column custom-width">
-                  <h2 class="title is-3">Using Different Control</h2>
-
-                  <div id="results-carousel" class="carousel results-carousel" align="center">
-                      <div class="item item-video1">
-                          <!-- Add caption element for each video preload="auto"-->
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Input Video</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop width="150px">
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/ski-follow/source.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
-                              <video preload="auto" poster="" autoplay controls muted loop width="150px">
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/ski-follow/polar-bear-pnp.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div style="font-size: xx-large;">To <text class="prompt">"Polar Bear"</text>
-                          </div>
-                      </div>
-                      <div class="item item-video2">
-                          <!-- Add caption element for each video preload="auto"-->
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Input Video</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tea-pour/source.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Depth</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tea-pour/depth.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Ours+ControlNet-Depth <a href="#ref-controlnet">[7]</a></caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tea-pour/depth-vector.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          </br>
-                          <div style="font-size: xx-large;">To <text class="prompt">"Vector Art"</text></div>
-                      </div>
-
-                      <div class="item item-video2">
-                          <!-- Add caption element for each video preload="auto"-->
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Input Video</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tennis/source.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Softedge</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tennis/softedge.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Ours+ControlNet-Softedge <a href="#ref-controlnet">[7]</a></caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/tennis/softedge-spiderman.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          </br>
-                          <div style="font-size: xx-large;">To <text class="prompt">"Spiderman"</text></div>
-                      </div>
-
-                      <div class="item item-video2">
-                          <!-- Add caption element for each video preload="auto"-->
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Input Video</caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/train/source.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          <div class="video-wrapper" style="width: 300px;">
-                              <caption>Ours+ControlNet-Tile <a href="#ref-controlnet">[7]</a></caption>
-                              <video preload="auto" poster="" autoplay controls muted loop>
-                                  <!-- Your video preload="auto"file here -->
-                                  <source src="videos/controls/train/tile.mp4" type="video/mp4">
-                              </video>
-                          </div>
-                          </br>
-                          <div style="font-size: xx-large;">To <text class="prompt">"Minecraft Style"</text></div>
-                      </div>
-
-
-                  </div>
-
-                  <!-- <div class="content has-text-justified">
-      <div class="caption-container">
-        <div class="caption" style="width: 140px;text-align:center;" >
-          Input video
-        </div>
-        <div class="caption" style="width: 140px;text-align: center;">
-          Ours+PnP <a href="#ref-pnp">[1]</a>
-        </div>
-        <div class="caption" style="width: 140px;text-align: center;">
-          Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
-        </div>
-      <div class="caption" style="width: 140px;text-align: center;">
-          Text2Video-Zero <a href="#ref-t2v">[3]</a>
-        </div>
-        <div class="caption" style="width: 140px;text-align: center;">
-          Tune-a-video <a href="#ref-tav">[4]</a>
-        </div>
-
-        <div class="caption" style="width: 140px;text-align: center;">
-          vid2vid-zero <a href="#ref-v2v">[5]</a>
-        </div>
-        <div class="caption" style="width: 140px;text-align: center;">
-          Pix2Video <a href="#ref-p2v">[6]</a>
-        </div>
-        
-      </div>
-</div> -->
-              </div>
-          </div>
-</section>
-
-
 <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -601,7 +463,6 @@
 
 
 
-<!-- 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -642,7 +503,7 @@
               </tr>
             </tbody>
           </table>
-  
+<!--   
           <div class="has-text-centered" style="background-color:cornsilk">
             <strong>Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a> <br/>
           </div>
@@ -666,9 +527,9 @@
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/tennis/groundvideo_3.mp4" autoplay=" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
-          </table>
+          </table> -->
 
-          <div class="has-text-centered" style="background-color:cornsilk">
+          <!-- <div class="has-text-centered" style="background-color:cornsilk">
             <strong>Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Spider</a> is jumping on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> trampoline </a> before a graffiti wall<br/>
           </div>
 
@@ -691,14 +552,14 @@
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
-          </table>
+          </table> -->
 
 
           <div class="has-text-centered">
             <strong><a style="color: black; font-size: 30px; font-weight: bold;">2.Multi-Object Qualitative Comparison</a></strong>
           </div>
 
-          <div class="has-text-centered" style="background-color:cornsilk">
+          <!-- <div class="has-text-centered" style="background-color:cornsilk">
             <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man</a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> are jumping skateboard before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">golden ginkgo trees</a><br/>
           </div>
 
@@ -721,7 +582,7 @@
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
-          </table>
+          </table> -->
 
 
           <div class="has-text-centered" style="background-color:cornsilk">
@@ -750,7 +611,7 @@
           </table>
 
 
-          <div class="has-text-centered" style="background-color:cornsilk">
+          <!-- <div class="has-text-centered" style="background-color:cornsilk">
             <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man </a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> Spider Man</a> running under <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> frosty yellow trees</a>  with <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">golden leaves</a> on the ground <br/>
           </div>
 
@@ -773,7 +634,7 @@
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
-          </table>
+          </table> -->
 
 
           </div>
@@ -781,7 +642,7 @@
       </div>
     </div>
   </div>
-</section> -->
+</section> 
 
 <!--End paper poster -->
 
