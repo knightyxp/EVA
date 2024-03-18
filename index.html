@@ -406,7 +406,7 @@
           </table>
   
           <div class="has-text-centered" style="background-color:cornsilk">
-            <strong>Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court</a>before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">an iced wall</a> <br/>
+            <strong>Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a> <br/>
           </div>
 
           <table width="1200" align="center" class="video-no-container">
@@ -429,43 +429,114 @@
               </tr>
             </tbody>
           </table>
-          
+
           <div class="has-text-centered" style="background-color:cornsilk">
-            <strong>Source Prompt:</strong> "A <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">black swan</a> swimming in a pond." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 25px; font-weight: bold;">black swan</a> -> <a style="color: purple; font-family: caveat; font-size: 25px; font-weight: bold;">duck</a> <br/>
-            </div>
-  
-            <table width="1200" align="center" class="video-no-container">
-              <tbody>
-                <tr>
-                  <th style="width: 150px; text-align: center;">Source Video</th>
-                  <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
-                  <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
-                  <th style="width: 150px; text-align: center;">TokenFlow</th>
-                </tr>
-                <tr>
-                  <th><video id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/videoswap_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/rerender_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tokenflow_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                </tr>
-              </tbody>
-            </table>
-            <table width="1200" align="center" class="video-no-container">
-              <tbody>
-                <tr>
-                  <th style="width: 150px; text-align: center;">Text2Video-Zero</th>
-                  <th style="width: 150px; text-align: center;">StableVideo</th>
-                  <th style="width: 150px; text-align: center;">Tune-A-Video</th>
-                  <th style="width: 150px; text-align: center;">FateZero</th>
-                </tr>
-                <tr>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/t2v_zero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/stablevideo_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/tune_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                  <th><video data-master-id="master16" width="300" src="./supplementary/assets/qualitative_comp/comp_previous/2003_6_duck/fatezero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                </tr>
-              </tbody>
-            </table>
+            <strong>Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Spider</a> is jumping on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> trampoline </a> before a graffiti wall<br/>
+          </div>
+
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/source_video_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/roller-blade/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="has-text-centered">
+            <strong><a style="color: black; font-size: 30px; font-weight: bold;">2.Multi-Object Qualitative Comparison</a></strong>
+          </div>
+
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man</a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> are jumping skateboard before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">golden ginkgo trees</a><br/>
+          </div>
+
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/source_video_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/skateboard-two-man/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;"> Spider man </a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> Wonder Woman</a> are playing badminton before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> charcoal grey wall</a><br/>
+          </div>
+
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/source_video_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/badminton/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="has-text-centered" style="background-color:cornsilk">
+            <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man </a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> Spider Man</a> running under <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> frosty yellow trees</a>  with <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">golden leaves</a> on the ground <br/>
+          </div>
+
+          <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th style="width: 150px; text-align: center;">Source Video</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
+              </tr>
+              <tr>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/source_video_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+            </tbody>
+          </table>
+
 
           </div>
         </div>
@@ -475,7 +546,7 @@
 </section>
 <!--End paper poster -->
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{gu2023videoswap,
@@ -485,7 +556,7 @@
   year      = {2023},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
