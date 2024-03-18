@@ -363,105 +363,238 @@
 </section>
 
 
-  <section class="hero is-small is-light">
-    <div class="hero-body">
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column custom-width">
-            <h2 class="title is-3">Comparisons</h2>
-            <!-- Carousel container -->
-            <div id="results-carousel" class="carousel results-carousel" align="center">
+          <div class="columns is-centered has-text-centered">
+              <div class="column custom-width">
+                  <h2 class="title is-3">Using Different Control</h2>
 
-              <!-- Start of Item 1: Iron Man surfing -->
-              <div class="item item-video1">
-                <div style="font-size: xx-large;">Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">falling snow </a>sky"</div>
-                <!-- Source Video -->
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>Source Video</caption>
-                  <video preload="auto" poster="" id="video11" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/source_video_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>EVA (ours)</caption>
-                  <video preload="auto" poster="" id="video12" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/eva_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>FateZero</caption>
-                  <video preload="auto" poster="" id="video13" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/fatezero_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>ControlVideo</caption>
-                  <video preload="auto" poster="" id="video14" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/controlvideo_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>TokenFlow</caption>
-                  <video preload="auto" poster="" id="video15" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/tokenflow_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>Ground-A-Video</caption>
-                  <video preload="auto" poster="" id="video16" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/groundvideo_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="item item-video2">
-                <div style="font-size: xx-large;">Edit Prompt: ""A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a>"</div>
-                <!-- Source Video -->
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>Source Video</caption>
-                  <video preload="auto" poster="" id="video21" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/source_video_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>EVA (ours)</caption>
-                  <video preload="auto" poster="" id="video22" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/eva_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>FateZero</caption>
-                  <video preload="auto" poster="" id="video23" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/fatezero_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>ControlVideo</caption>
-                  <video preload="auto" poster="" id="video24" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/controlvideo_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>TokenFlow</caption>
-                  <video preload="auto" poster="" id="video25" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/tokenflow_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="video-wrapper" style="width: 150px;">
-                  <caption>Ground-A-Video</caption>
-                  <video preload="auto" poster="" id="video26" autoplay controls muted loop width="150px">
-                    <source src="./supplementary/qualitative_results/comparison/single-object/tennis/groundvideo_3.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
+                  <div id="results-carousel" class="carousel results-carousel" align="center">
+                      <div class="item item-video1">
+                          <!-- Add caption element for each video preload="auto"-->
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Input Video</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/ski-follow/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                              <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/ski-follow/polar-bear-pnp.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Polar Bear"</text>
+                          </div>
+                      </div>
+                      <div class="item item-video2">
+                          <!-- Add caption element for each video preload="auto"-->
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Input Video</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tea-pour/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Depth</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tea-pour/depth.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Ours+ControlNet-Depth <a href="#ref-controlnet">[7]</a></caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tea-pour/depth-vector.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          </br>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Vector Art"</text></div>
+                      </div>
 
-            </div>
-            <!-- End of Carousel container -->
-            
+                      <div class="item item-video2">
+                          <!-- Add caption element for each video preload="auto"-->
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Input Video</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tennis/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Softedge</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tennis/softedge.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Ours+ControlNet-Softedge <a href="#ref-controlnet">[7]</a></caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/tennis/softedge-spiderman.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          </br>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Spiderman"</text></div>
+                      </div>
+
+                      <div class="item item-video2">
+                          <!-- Add caption element for each video preload="auto"-->
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Input Video</caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/train/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 300px;">
+                              <caption>Ours+ControlNet-Tile <a href="#ref-controlnet">[7]</a></caption>
+                              <video preload="auto" poster="" autoplay controls muted loop>
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/controls/train/tile.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          </br>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Minecraft Style"</text></div>
+                      </div>
+
+
+                  </div>
+
+                  <!-- <div class="content has-text-justified">
+      <div class="caption-container">
+        <div class="caption" style="width: 140px;text-align:center;" >
+          Input video
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Ours+PnP <a href="#ref-pnp">[1]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
+        </div>
+      <div class="caption" style="width: 140px;text-align: center;">
+          Text2Video-Zero <a href="#ref-t2v">[3]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Tune-a-video <a href="#ref-tav">[4]</a>
+        </div>
+
+        <div class="caption" style="width: 140px;text-align: center;">
+          vid2vid-zero <a href="#ref-v2v">[5]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Pix2Video <a href="#ref-p2v">[6]</a>
+        </div>
+        
+      </div>
+</div> -->
+              </div>
           </div>
+</section>
+
+
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">Comparisons</h2>
+          <div id="results-carousel" class="carousel results-carousel" align="center">
+
+            <div class="item item-video1">
+              <div style="font-size: xx-large;">Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">falling snow </a>sky"</div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video11" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video12" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video13" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video14" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video15" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video16" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/kite-surf/groundvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="item item-video2">
+              <div style="font-size: xx-large;">Edit Prompt: ""A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a>"</div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video21" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video22" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video23" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video24" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video25" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video26" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/tennis/groundvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div>
+          
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section> -->
 
 
 
