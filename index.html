@@ -363,19 +363,247 @@
 </section>
 
 
+
 <section class="hero is-small is-light">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+              <div class="column custom-width">
+                  <h2 class="title is-3">Comparisons</h2>
+
+                  <div id="results-carousel" class="carousel results-carousel" align="center">
+                      <div class="item item-video1">
+                          <!-- Add caption element for each video preload="auto"-->
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Input video</caption>
+                              <video preload="auto" poster="" id="video11" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/source.mp4" type="video/mp4">
+                              </video>
+
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                              <video preload="auto" poster="" id="video12" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/pnp.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                              <video preload="auto" poster="" id="video13" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/sd2depth.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                              <video preload="auto" poster="" id="video14" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/t2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                              <video preload="auto" poster="" id="video15" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/tav.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                              <video preload="auto" poster="" id="video16" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/v2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                              <video preload="auto" poster="" id="video25" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/gold-fish/shark/p2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          </br>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Shark"</text></div>
+                      </div>
+
+                      <div class="item item-video2">
+
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Input video</caption>
+                              <video preload="auto" poster="" id="video21" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                              <video preload="auto" poster="" id="video22" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/pnp.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                              <video preload="auto" poster="" id="video23" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/sd2depth.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                              <video preload="auto" poster="" id="video24" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/t2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                              <video preload="auto" poster="" id="video25" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/tav.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                              <video preload="auto" poster="" id="video26" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/v2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                              <video preload="auto" poster="" id="video27" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/drift-turn/snowy/p2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Snowy Road"</text></div>
+                      </div>
+                      <div class="item item-video3">
+
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Input video</caption>
+                              <video preload="auto" poster="" id="video31" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/source.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                              <video preload="auto" poster="" id="video32" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/pnp.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                              <video preload="auto" poster="" id="video33" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/sd2depth.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                              <video preload="auto" poster="" id="video34" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/t2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                              <video preload="auto" poster="" id="video35" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/tav.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                              <video preload="auto" poster="" id="video36" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/v2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div class="video-wrapper" style="width: 150px;">
+                              <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                              <video preload="auto" poster="" id="video37" autoplay controls muted loop
+                                  width="150px">
+                                  <!-- Your video preload="auto"file here -->
+                                  <source src="videos/compare/breakdance/colosseum/p2v.mp4" type="video/mp4">
+                              </video>
+                          </div>
+                          <div style="font-size: xx-large;">To <text class="prompt">"Ancient Colosseum"</text>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <!-- <div class="content has-text-justified">
+      <div class="caption-container">
+        <div class="caption" style="width: 140px;text-align:center;" >
+          Input video
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Ours+PnP <a href="#ref-pnp">[1]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
+        </div>
+      <div class="caption" style="width: 140px;text-align: center;">
+          Text2Video-Zero <a href="#ref-t2v">[3]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Tune-a-video <a href="#ref-tav">[4]</a>
+        </div>
+
+        <div class="caption" style="width: 140px;text-align: center;">
+          vid2vid-zero <a href="#ref-v2v">[5]</a>
+        </div>
+        <div class="caption" style="width: 140px;text-align: center;">
+          Pix2Video <a href="#ref-p2v">[6]</a>
+        </div>
+        
+      </div>
+</div> -->
+              </div>
+          </div>
+</section>
+
+
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column custom-width">
           <h2 class="title is-3">Comparisons</h2>
-          <!-- Carousel container -->
+
           <div id="results-carousel" class="carousel results-carousel" align="center">
 
-            <!-- Start of Item 1: Iron Man surfing -->
+
             <div class="item item-video1">
               <div style="font-size: xx-large;">Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">falling snow </a>sky"</div>
-              <!-- Source Video -->
+
               <div class="video-wrapper" style="width: 150px;">
                 <caption>Source Video</caption>
                 <video preload="auto" poster="" id="video11" autoplay controls muted loop width="150px">
@@ -415,7 +643,6 @@
             </div>
             <div class="item item-video2">
               <div style="font-size: xx-large;">Edit Prompt: ""A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a>"</div>
-              <!-- Source Video -->
               <div class="video-wrapper" style="width: 150px;">
                 <caption>Source Video</caption>
                 <video preload="auto" poster="" id="video21" autoplay controls muted loop width="150px">
@@ -455,13 +682,12 @@
             </div>
 
           </div>
-          <!-- End of Carousel container -->
           
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
