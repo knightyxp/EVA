@@ -309,16 +309,16 @@
                 </th>
                 <th> 
                   left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>, <br/>
-                  right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider-Man</a> 
+                  right man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a> 
                 <th>
                   left man&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a>, <br/>
-                  right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Iron Man</a> 
+                  right man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> 
                 </th>
                 <th> wall &rarr; charcoal grey wall </th>
                 <th>man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a>,  <br/>
-                  woman&rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Wonder Woman</a> </th>
+                  woman&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Wonder Woman</a> </th>
                 <th>man&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Wonder Woman</a>, <br/>
-                  woman &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider-Man</a> </th>
+                  woman &rarr; <a style="color: red;; font-family: caveat; font-weight: bold;">Spider-Man</a> </th>
               </tr>
               <tr>
                 <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/swap_identity/running_two_man.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
@@ -337,14 +337,14 @@
                 <th> <a style="color: black; font-family: caveat; font-size:13px;">ground &rarr; grassland</a> ,<br/>
                   <a style="color: black; font-family: caveat; font-size:13px;">blue sky &rarr; raining sky </a> </th>
                 <th>left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>, <br/>
-                  right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider-Man</a> </th>
+                  right man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a> </th>
                 <th>left man&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a>, <br/>
-                  right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Iron Man</a> </th>
+                  right man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> </th>
                 <th> <a style="color: black; font-family: caveat; font-size:13px;">store &rarr; cyberpunk cityspace </a> </th>
                 <th>left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>,<br/>
-                  right man&rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Hulk</a> </th>
+                  right man&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Hulk</a> </th>
                 <th>left man&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Hulk</a>,<br/>
-                   right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Iron Man</a> </th>
+                   right man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> </th>
               </tr>
               <tr>
                 <th><video id="master15" width="300" src="./supplementary/qualitative_results/swap_identity/basketball_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
@@ -372,29 +372,32 @@
           <h2 class="title is-3">Comparison (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Comparison</a>)</h2>
           <div class="content has-text-justified">
 
-          Previous video-editing methods are <strong> not effective in revealing the real shape </strong> of target concept: <br/>
-            
           <div class="has-text-centered">
-          <img src="static/assets/predefine_concept.png" alt="" width="600" /> <br/>
+            <strong><a style="color: black; font-size: 30px; font-weight: bold;">1.Single-Object Qualitative Comparison</a></strong>
           </div>
-
+  
+          Previous video-editing methods failed in  <strong>1. accurate text-to-attribute control 2. avoiding attention leakage </strong> <br/>
+            
           <div class="has-text-centered" style="background-color:cornsilk">
-            <strong>Source Prompt:</strong> "An <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> flying above the clouds in the sky." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Target Swap:</strong> <a style="color: blue; font-family: caveat; font-size: 22px; font-weight: bold;">airplane</a> -> <a style="color: purple; font-family: caveat; font-size: 22px; font-weight: bold;">helicopter</a> <br/>
+            <strong>Edit Prompt:</strong> "An <a style="color: red; font-family: caveat; font-size: 22px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 22px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 22px; font-weight: bold;">falling snow </a>sky <br/>
           </div>
 
           <table width="1200" align="center" class="video-no-container">
             <tbody>
               <tr>
                 <th style="width: 150px; text-align: center;">Source Video</th>
-                <th style="width: 150px; text-align: center;">VideoSwap (Ours)</th>
-                <th style="width: 150px; text-align: center;">Rerender-A-Video</th>
-                <th style="width: 150px; text-align: center;">TokenFlow</th>
+                <th style="width: 150px; text-align: center;">EVA (Ours)</th>
+                <th style="width: 150px; text-align: center;">FateZero</th>
+                <th style="width: 150px; text-align: center;">ControlVideo</th>
+                <th style="width: 150px; text-align: center;">Ground-A-Video</th>
               </tr>
               <tr>
-                <th><video id="master15" width="300" src="./supplementary/qualitative_results/single_object/tennis_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/tennis_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/parour_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/single_object/parour_2cls_new.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/source_video_1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./supplementary/qualitative_results/comparison/single-object/kite-surf/groundvideo_3.mp4 autoplay=" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
           </table>
