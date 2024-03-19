@@ -115,7 +115,7 @@ body {
 }
 .custom-width {
   flex: 0 0 auto;
-  width: 1407px;
+  width: 96%;
   /* width:  83.33%; 5/6 of the available width */
 }
 .results-carousel .item {
