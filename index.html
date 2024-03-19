@@ -371,13 +371,17 @@
           <h2 class="title is-3">Comparison (<a href="./supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Comparison</a>)</h2>
           <div class="content has-text-justified">
 
-          <div class="has-text-centered">
-            Previous video-editing methods failed in  <strong>1. accurate text-to-attribute control 2. avoiding attention leakage </strong> 
-          </div>
-          <div id="results-carousel" class="carousel results-carousel" align="center">
+            <div class="has-text-centered">
+              Previous video-editing methods failed in  <strong>1. accurate text-to-attribute control 2. avoiding attention leakage </strong> 
+            </div>
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+
+            <div class="has-text-centered">
+              <strong><a style="color: black; font-size: 30px; font-weight: bold;">1.Single-Object Qualitative Comparison</a></strong>
+            </div>
 
             <div class="item item-video1">
-              <div style="font-size: xx-large;">Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">falling snow </a>sky"</div>
+              <div class="has-text-centered">Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Iron Man</a> is surfing with kite rope on a <a style="color: pink; font-family: caveat; font-size: 18px; font-weight: bold;">pink </a>wave over blue sea under <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">falling snow </a>sky"</div>
               <div class="video-wrapper" style="width: 150px;">
                 <caption>Source Video</caption>
                 <video preload="auto" poster="" id="video11" autoplay controls muted loop width="150px">
@@ -416,7 +420,7 @@
               </div>
             </div>
             <div class="item item-video2">
-              <div style="font-size: xx-large;">Edit Prompt: ""A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> an iced wall</a>"</div>
+              <div class="has-text-centered" >Edit Prompt: ""A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"</div>
               <div class="video-wrapper" style="width: 150px;">
                 <caption>Source Video</caption>
                 <video preload="auto" poster="" id="video21" autoplay controls muted loop width="150px">
@@ -454,7 +458,190 @@
                 </video>
               </div>
             </div>
+            <div class="item item-video3">
+              <div class="has-text-centered">
+                Edit Prompt:</strong> "A <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Spider</a> is jumping on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> trampoline </a> before a graffiti wall"
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video31" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video32" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video33" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video34" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video35" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video36" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/single-object/roller-blade/groundvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <div class="content has-text-justified">
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+
+            <div class="has-text-centered">
+              <strong><a style="color: black; font-size: 30px; font-weight: bold;">2.Multi-Object Qualitative Comparison</a></strong>
+            </div>
+
+            <div class="item item-video1">
+              <div class="has-text-centered">
+                Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;"> Spider man </a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> Wonder Woman</a> are playing badminton before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size:  18px; font-weight: bold;"> charcoal grey wall"</a>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video11" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video12" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video13" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video14" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video15" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video16" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/groundvideo_3.mp4 type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="item item-video2">
+              <div class="has-text-centered" >  
+                Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man </a> and a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;"> Spider Man</a> running under <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> frosty yellow trees</a>  with <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;">golden leaves</a> on the ground "
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video21" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video22" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/running_two_man/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video23" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video24" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video25" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video26" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/badminton/groundvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="item item-video3">
+              <div class="has-text-centered">
+                Edit Prompt: "An <a style="color: red; font-family: caveat; font-size: 18px; font-weight: bold;">Iron man</a> pushes a <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 18px; font-weight: bold;">Batman</a> in a soap-box car on the  <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> snowy bridge </a> over  <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 18px; font-weight: bold;"> snow covered ground</a> "
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Source Video</caption>
+                <video preload="auto" poster="" id="video31" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/source_video_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>EVA (ours)</caption>
+                <video preload="auto" poster="" id="video32" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/eva_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>FateZero</caption>
+                <video preload="auto" poster="" id="video33" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/fatezero_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>ControlVideo</caption>
+                <video preload="auto" poster="" id="video34" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/controlvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>TokenFlow</caption>
+                <video preload="auto" poster="" id="video35" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/tokenflow_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper" style="width: 150px;">
+                <caption>Ground-A-Video</caption>
+                <video preload="auto" poster="" id="video36" autoplay controls muted loop width="150px">
+                  <source src="./supplementary/qualitative_results/comparison/mulit-object/soap-box/groundvideo_3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
           </div>
           
         </div>
@@ -466,9 +653,7 @@
 
 
 
-
-
-<section class="hero">
+<!-- <section class="hero">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered has-text-centered">
@@ -543,7 +728,7 @@
       </div>
     </div>
   </div>
-</section> 
+</section>  -->
 
 <!--   
           <div class="has-text-centered" style="background-color:cornsilk">
