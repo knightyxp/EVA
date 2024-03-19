@@ -1,1072 +1,1155 @@
+<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/chalkduster');
+</style>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing</title>
-    <link href="./style.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-  </head>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrollable Table with Arrow Buttons</title>
-    <style>
-      .scrollable-table-container {
-          display: flex;
-          align-items: center;
-      }
-      #scrollableTableWrapper {
-          overflow-x: auto;
-          overflow-y: hidden;
-          white-space: normal;
-          
-      }
-      table {
-          border-collapse: collapse;
-          margin: auto;
-      }
-      th.sticky {
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #F1FAFA;
-      }    
-      th.sticky-second {
-        position: sticky;
-        left: 302px;
-        z-index: 1;
-        background-color: #F1FAFA;
-      }
-      .video-no-container video::-webkit-media-controls {
-        display: none !important;
-      }
-    </style>
-  </head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
 
 <body>
-	<button style="position: fixed;right: 15px;top:  90%;height: 40px;width: 120px; font-size: 20px;" type="button"><a href="./videoswap_supp.html#top">Back to top</a></button> 
-  <div class="page-container">
-  <h1 align="center">VideoSwap: Customized Video Subject Swapping with <br/> Interactive Semantic Point Correspondence</h1>
+	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 100px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
+<div class="page-container">
+  <h1 align="center">EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing</h1>
+  <!-- <h2 align="center">Paper ID #</h2> -->
   <h2 align="center">Supplementary Material</h2>
 	
-  <h2 align="center"><a style="color: red;">Please refresh the webpage if the content has not loaded.</a></h3>
-
   <p align="center">&nbsp;</p>
-	<a href="./videoswap_supp.html#top"></a>
-
+  In this supplementary file, we provide the full videos of the results shown in the paper, as well as additional qualitative results. We also provide a demo code for our method. Please refer to the corresponding section linked below for more details.
+  <a href="#top"></a>
   <ul>
-    <li><a href="./videoswap_supp.html#interaction_video" style="font-size:x-large">User-Point Interaction Demo Video</a></li><br>
-
-    <li><a href="./videoswap_supp.html#qualitative_results_container" style="font-size:x-large">Qualitative Results of VideoSwap</a></li><br>
-    <!-- sub section -->
-    <ul>
-      <li><a href="./videoswap_supp.html#animal_swap" style="font-size:x-large">Animal Swap</a></li><br>
-      <li><a href="./videoswap_supp.html#object_swap" style="font-size:x-large">Object Swap</a></li><br>
-    </ul>
-  
-    <li><a href="./videoswap_supp.html#comparison_container" style="font-size:x-large">Qualitative Comparison</a></li><br>
-    <ul>
-      <li><a href="./videoswap_supp.html#comp_prev" style="font-size:x-large">Compare to Previous Video Editing Methods</a></li><br>
-      <li><a href="./videoswap_supp.html#comp_baseline" style="font-size:x-large">Compare to Baselines on AnimateDiff</a></li><br>
-    </ul>
-
-    <li><a href="./videoswap_supp.html#ablation_container" style="font-size:x-large">Ablation Studies</a></li><br>
-    <ul> 
-      <li><a href="./videoswap_supp.html#sparse_motion_feature" style="font-size:x-large">Sparse Motion Feature</a></li><br>
-      <li><a href="./videoswap_supp.html#point_patch_loss" style="font-size:x-large">Point Patch Loss</a></li><br>
-      <li><a href="./videoswap_supp.html#semantic_enhanced_schedule" style="font-size:x-large">Semantic-Enhanced Schedule</a></li><br>
-      <li><a href="./videoswap_supp.html#drag_based_control" style="font-size:x-large">Drag-based Point Control</a></li><br>
-    </ul>
-
+	<li><a href="#fig6">Qualitative Results of EVA</a></li><BR>
+  <ul>
+    <li><a href="./eva_supp.html#single-object" style="font-size:x-large">Single-Object</a></li><br>
+    <li><a href="./eva_supp.html#multi-object" style="font-size:x-large">Multi-Object</a></li><br>
   </ul>
-
-  <hr>
-  
-  <h2 id="interaction_video" align="center">User-Point Interaction Demo Video</h2>
-
-  <p style="font-size: large; width: 1000px;">
-    We define the following two types of user-point interaction on the keyframe:
-  </p>
-  <ul style="font-size: large;">
-      <li>The user defines semantic points at a specific keyframe.</li>
-      <li>The user selects or drags the semantic point at the keyframe.</li>
+	<li><a href="#fig7"> Qualitative Comparison </a></li>
+  <ul>
+    <li><a href="./eva_supp.html#comp_single" style="font-size:x-large">Compare to other on Single-Object</a></li><br>
+    <li><a href="./eva_supp.html#comp_multi" style="font-size:x-large">Compres to Baselines on Multi-Object </a></li><br>
   </ul>
-  <p style="font-size: large; width: 1000px;">
-      The accompanying demo video illustrates how users interact with semantic points to edit the video.
-  </p>
-
-  <div style="text-align: center;">
-    <video width="640" src="./assets/user_point_interaction.mp4" controls="" muted=""> </video>
-  </div>
-  	
-  <!------------------ BEGIN SECTION ------------------>
-  <p>&nbsp;</p>
-  <hr>
-  <h2 id="qualitative_results_container" align="center">Qualitative Results of VideoSwap</h2>
-
-  <h3 id="animal_swap" align="left">1. Animal Swap</h3>
-  
-  <table width="1200" align="center">
-    <tbody>
-      <tr>
-        <th><p style="font-family: Chalkduster;" align="center"><a style="color: black;">Reference Images for Customized Concepts:</p></th>
-        <th><img height="200" src="./assets/custom_refer/refer_animal.png" alt="Reference of the customized conecpts"></th>  
-      </tr>
-    </tbody>
-  </table>
-
-  <p>&nbsp;</p>
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more results.</p>
-  <p>&nbsp;</p>
-
-  <div class="scrollable-table-container" align="center">
-    <div id="scrollableTableWrapper" align="center">
-        <table width="1200" align="center" class="video-no-container">
-          <tbody>
-            <tr>
-              <th class="sticky"><video id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/9_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/11_V_dogA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/10_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/1_panda.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master3" width="200" src="./assets/qualitative_results/animal/1_catheadturn_2001/8_monkey.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-      
-            <tr>
-              <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">kitten</a> turning its head on a wooden floor."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">kitten</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">kitten</a> -> <a style="color: purple;">V <sup>dogA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">kitten</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">kitten</a> -> <a style="color: purple;">panda</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">kitten</a> -> <a style="color: purple;">monkey</a></th>
-            </tr>
-      
-            <tr>
-              <th class="sticky"><video id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/10_V_dogA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/9_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/1_panda.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master4" width="200" src="./assets/qualitative_results/animal/2_catpiano_2002/8_monkey.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">cat</a> walking on a piano keyboard."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">V <sup>dogA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">panda</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">monkey</a></th>
-            </tr>
-
-            <tr>
-              <th class="sticky"><video id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/10_V_dogA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/9_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master5" width="300" src="./assets/qualitative_results/animal/3_swan_2003/3_seal.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">black swan</a> swimming in a pond."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">V <sup>dogA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">seal</a></th>
-            </tr>
-          
-            <tr>
-              <th class="sticky"><video id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/9_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/1_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/3_cow.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master6" width="300" src="./assets/qualitative_results/animal/4_monkey_2004/8_wolf.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">monkey</a> sitting on the ground eating something."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">teddy bear</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">tiger</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">cow</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">wolf</th>
-            </tr>
-            
-            <tr>
-              <th class="sticky"><video id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/10_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/6_cow.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/5_lion.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master7" width="300" src="./assets/qualitative_results/animal/5_ss1058_2005/4_pig.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <th width="300" class="sticky"> Source Video: "An <a style="color: blue; font-family: caveat; font-size: 22px;">elk</a> standing and turning its head in a field."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">cow</a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">lion</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">pig</th>
-            </tr>
-
-            <tr>
-              <th class="sticky"><video id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/10_V_dogA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/9_V_dogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/8_wolf.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master8" width="300" src="./assets/qualitative_results/animal/6_dogcar_2007/2_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">dog</a> sitting on the side of a car window looking out the window."</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>dogA</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">wolf</th>
-              <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">teddy bear</th>
-            </tr>
-
-
-        </tbody>
-      </table>
-      
-    </div>
-
-  </div>
-
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more results.</p>
-  <p>&nbsp;</p>
-
-
-  <h3 id="object_swap" align="left">2. Object Swap</h3>
-
-  <table width="1200" align="center">
-    <tbody>
-      <tr>
-        <th><p style="font-family: Chalkduster;" align="center"><a style="color: black;">Reference Images for Customized Concepts:</p></th>
-        <th><img height="300" src="./assets/custom_refer/refer_object.png" alt="Reference of the customized conecpts"></th>
-      </tr>
-    </tbody>
-  </table>
-
-  
-  <table width="1200" align="center" class="video-no-container">
-      <tbody>
-        
-        <tr>
-          <th><video id="master9" width="300" src="./assets/qualitative_results/object/1_car_turn_3002/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master9" width="300" src="./assets/qualitative_results/object/1_car_turn_3002/10_V_carA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master9" width="300" src="./assets/qualitative_results/object/1_car_turn_3002/9_V_porsche.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master9" width="300" src="./assets/qualitative_results/object/1_car_turn_3002/4_truck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">V <sup>carA</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">V <sup>porsche</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">truck</a></th>
-        </tr>
-
-        <tr>
-          <th><video id="master10" width="300" src="./assets/qualitative_results/object/2_car_ss1070_3003/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master10" width="300" src="./assets/qualitative_results/object/2_car_ss1070_3003/10_V_carA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master10" width="300" src="./assets/qualitative_results/object/2_car_ss1070_3003/9_V_porsche.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master10" width="300" src="./assets/qualitative_results/object/2_car_ss1070_3003/2_van.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">car</a> driving down a road with wind turbine and grass."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">car</a> -> <a style="color: purple;">V <sup>carA</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">car</a> -> <a style="color: purple;">V <sup>porsche</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">car</a> -> <a style="color: purple;">van</a></th>
-        </tr>
-        
-        <tr>
-          <th><video id="master11" width="300" src="./assets/qualitative_results/object/3_airplane_ss1056_3004/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master11" width="300" src="./assets/qualitative_results/object/3_airplane_ss1056_3004/7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master11" width="300" src="./assets/qualitative_results/object/3_airplane_ss1056_3004/6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master11" width="300" src="./assets/qualitative_results/object/3_airplane_ss1056_3004/1_balloon.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">balloon</a></th>
-        </tr>
-
-        <tr>
-          <th><video id="master12" width="300" src="./assets/qualitative_results/object/4_airplane_ss1084_3006/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master12" width="300" src="./assets/qualitative_results/object/4_airplane_ss1084_3006/7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master12" width="300" src="./assets/qualitative_results/object/4_airplane_ss1084_3006/6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master12" width="300" src="./assets/qualitative_results/object/4_airplane_ss1084_3006/2_UFO.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">UFO</a></th>
-        </tr>
-
-        <tr>
-          <th><video id="master13" width="300" src="./assets/qualitative_results/object/5_boat_3005/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master13" width="300" src="./assets/qualitative_results/object/5_boat_3005/7_V_yacht.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master13" width="300" src="./assets/qualitative_results/object/5_boat_3005/8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master13" width="300" src="./assets/qualitative_results/object/5_boat_3005/5_canoe.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">boat</a> is traveling through the water near a rocky shore."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>yacht</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">canoe</a></th>
-        </tr>
-        
-        <tr>
-          <th><video id="master14" width="300" src="./assets/qualitative_results/object/6_pexel2758_3009/source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master14" width="300" src="./assets/qualitative_results/object/6_pexel2758_3009/7_V_yacht.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master14" width="300" src="./assets/qualitative_results/object/6_pexel2758_3009/8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-          <th><video data-master-id="master14" width="300" src="./assets/qualitative_results/object/6_pexel2758_3009/5_canoe.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        </tr>
-
-        <tr>
-          <th width="300"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">boat</a> is traveling through the sea."</th>
-          <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>yacht</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
-          <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">canoe</a></th>
-        </tr>
-  </tbody>
-  </table>
-
-
-  <!------------------ END SECTION ------------------>
-
-  <!------------------ BEGIN SECTION ------------------>
-  <p>&nbsp;</p>
-  <hr>
-
-  <h2 id="comparison_container" align="center">Qualitative Comparison</h2>
-
-  <h3 id="comp_prev" align="left">1. Compare to Previous Video-Editing Methods</h3>
-
-  <p style="font-size: large" width="1000">  
-  We compare VideoSwap with following video-editing methods: 
-  </p>
-
-  <ul style="font-size: large">
-    <li>Dense Correpondence: Rerender-A-Video <a href="#ref-rerender">[1]</a>, TokenFlow <a href="#ref-tokenflow">[2]</a>, Text2Video-Zero <a href="#ref-t2vzero">[3]</a>, StableVideo <a href="#ref-stablevideo">[4]</a></li>
-    <li>Implicit Motion Encoding: Tune-A-Video <a href="#ref-tav">[5]</a>, FateZero <a href="#ref-fatezero">[6]</a> </li>
+  <li><a href="#ablation">Ablation Studies</a></li>
+  <ul> 
+    <li><a href="./eva_supp.html#latent blend" style="font-size:x-large">w/o Latent Blend</a></li><br>
+    <li><a href="./eva_supp.html#controlnet" style="font-size:x-large">w/o ControlNet pose guidance</a></li><br>
+    <li><a href="./eva_supp.html#ST Layout Attn" style="font-size:x-large">w/o ST Layout Attn</a></li><br>
+    <li><a href="./eva_supp.html#Modulated Attn" style="font-size:x-large">Compare to Modulated Attn</a></li><br>
+    <li><a href="./eva_supp.html#SC-Layout Attn" style="font-size:x-large">Compare to Sparse-Causal Layout Attn</a></li><br>
   </ul>
-
-  <p style="font-size: large" width="1000">  
-    We utilize pre-defined concepts in the pretrained model and retrieve several images for shape reference. 
-    In comparison with previous methods, VideoSwap can <a style="color: red;">reveal the correct shape of a given concept</a> while aligning the motion of the source video.  
-  </p>
-
-  <table width="1200" align="center">
-    <tbody>
-      <tr>
-        <th><p style="font-family: Chalkduster;" align="center"><a style="color: black;">Retrived Images for Pre-defined Concepts:</p></th>
-        <th><img height="200" src="./assets/custom_refer/refer_compprevious.png" alt="Reference of the customized conecpts"></th>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>&nbsp;</p>
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
-
-  <div class="scrollable-table-container" id="comp_previous">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-            <tbody>
-              <tr>
-                <th class="sticky">Source Video</th>
-                <th class="sticky-second">VideoSwap (Ours)</th>
-                <th>Rerender-A-Video</th>
-                <th>TokenFlow</th>
-                <th>Text2Video-Zero</th>
-                <th>StableVideo</th>
-                <th>Tune-A-Video</th>
-                <th>FateZero</th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/source_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/videoswap_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/rerender_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tokenflow_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/t2v_zero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/stablevideo_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tune_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/fatezero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/videoswap_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/rerender_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/tokenflow_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/t2v_zero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/stablevideo_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/tune_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/fatezero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">black swan</a> swimming in a pond."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/3002_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/videoswap_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/rerender_a_video_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/tokenflow_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/t2v_zero_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/stablevideo_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/tune_a_video_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/fatezero_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
-              </tr>
-            
-              <tr>
-                <th class="sticky"><video id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/2005_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/videoswap_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/rerender_a_video_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/tokenflow_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/t2v_zero_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/stablevideo_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/tune_a_video_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/fatezero_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">elk</a> standing and turning its head in a field."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-              </tr>
-          </tbody>
-        </table>
-    </div>
-  </div>
-
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
-
-
-  <h3 id="comp_baseline" align="left">2. Compare to Baselines on AnimateDiff</h3>
-
-  <p style="font-size: large" width="1000"> 
-    We also compare with several baselines built upon AniamteDiff <a href="#ref-animatediff">[7]</a>. The only difference with our method is in motion injection:<br>
-  </p>
-  <ul style="font-size: large">
-    <li>DDIM-Only (i.e., no motion injection): Without motion injection, the target swap <a style="color: red;">cannot align with the motion</a> of the source subject.</li>
-    <li>DDIM + Tune-A-Video (i.e., implicit motion injection): Through implicit motion injection by tuning from the source video, the <a style="color: red;">appearance and shape of the source subject will leak</a> into the target swap, degrading the video quality.</li>
-    <li>DDIM + T2I-Adapter (i.e., dense motion injection): With a depth map as a condition, the <a style="color: red;">shape of the target subject needs to conform to the source subject</a> and <a style="color: red;">cannot align the non-rigid motion</a> with the source subject.</li>
-    <li>Our VideoSwap ---DDIM + Semantic Points (i.e., sparse motion injection): With sparse semantic points as correspondence, the target swap <a style="color: red;">aligns with the motion of the source subject</a> and <a style="color: red;">loosens the shape constraints</a>.</li> 
+  <li><a href="#mask-source">Why acquire layout masks from SAM-Track? </a></li>
+  <li><a href="#decouple-motion-identity">Decouple motion and identity</a></li>
+  <li><a href="#limitations">Limitations</a></li>
   </ul>
+	
+    <!------------------ BEGIN SECTION ------------------>
+    <!------------------ FIG6 ------------------>
 
-  <table width="1200" align="center">
-    <tbody>
-      <tr>
-        <th><p style="font-family: Chalkduster;" align="center"><a style="color: black;">Reference Images for Customized Concepts:</p></th>
-        <th><img height="200" src="./assets/custom_refer/refer_compbaseline.png" alt="Reference of the customized conecpts"></th>
-      </tr>
-    </tbody>
-  </table>
 
-  <p>&nbsp;</p>
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
+<hr style="height:3px">
 
-  <div class="scrollable-table-container" id="comp_baseline">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-            <tbody>
+<h2 id="fig6" align="left"><a name="image-results" id="image-results"></a>Our Results</h2>
+
+Here we include both the complete videos of the images shown in Figure 1 (teaser) and Figure 6 (qualitative results) and additional video-text pairs. Our model has ability to perform editing on a wide range of
+<ul>
+  <li> <b>video lengths</b> without requiring extra computational resources, e.g. 9 frames, 144 frames (<a href="#additional">Additional Qualitative Results</a>) .</li>
+  <li> <b>resolutions</b>, e.g., 512x320 (row 1), 512x512 (row 2).</li>
+  <li> <b>motions</b>, e.g. exo-motion (row 2), ego-motion (row 4), ego-exo motion (<a href="#additional-comparison">Additional Comparisons to Baselines</a> row 1), occlusions (<a href="#user-study">Examples from User Study</a> first comparison, 'a cheetah is moving'), multiple objects with appearances/disappearances (<a href="#additional">Additional Qualitative Results</a> row 1)</li>
+  <li> <b>objects</b>, e.g., humans (row 1 and 7), animals (row 2 and 3), vehicles (row 3).</li>
+  <li> <b>types of edits</b>, e.g. local editing (row 1 column 5), visual style editing (row 5 column 4), background editing (monkey, row 6 column 3), shape/attribute editing (row 2), extreme shape editing (<a href="#extreme">Extreme Shape Editing</a>), multiple editing types at once (background + shape editing, row 6 column 4) </li>
+  <li> <b>text detail levels</b>, e.g. long and detailed descriptions (<a href="#additional">Additional Qualitative Results</a> row 2 (bear), 3 (flamingo)), single word prompts (row 1 column 4)</li>
+</ul>
+<!-- <br/> -->
+
+<!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
+<!-- <hr> -->
+<!-- <br/> -->
+
+<table  width="1200" align="center" >
+  <tbody>
+    <!-- <th>A</th>
+    <th>B</th>
+    <th>C</th> -->
+              <tr>
+                  <th style="font-size: 16px;width: 240px;">Input video - 45 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"an ancient Egyptian pharaoh is typing"</th>
+                  <th style="font-size: 16px;width: 240px;">"a skeleton is typing"</th>
+                  <th style="font-size: 16px;width: 240px;">"a zombie"</th>
+                  <th style="font-size: 16px;width: 240px;">"a man wearing a glitter jacket is typing"</th>
+              </tr>
+              <tr>
+                  <th><a href="assets/Fig1-teaser/typing/typing_source-new.mp4"> <video  width="240" src="assets/Fig1-teaser/typing/typing_source-new.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/typing/egyptian.mp4"> <video  width="240" src="assets/Fig1-teaser/typing/egyptian.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/candidates/new/typing/skeleton.mp4"> <video  width="240" src="assets/extra/candidates/new/typing/skeleton.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/typing/zombie_typing.mp4"> <video  width="240" src="assets/Fig1-teaser/typing/zombie_typing.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/typing/glitter.mp4"> <video  width="240" src="assets/Fig1-teaser/typing/glitter.mp4" autoplay loop controls muted /> </a> </a></th>
+              </tr>
+
+              <tr>
+                  <th style="font-size: 16px;width: 240px;">Input video - 27 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"a white cat"</th>
+                  <th style="font-size: 16px;width: 240px;">"a shiny silver robotic wolf, futuristic"</th>
+                  <th style="font-size: 16px;width: 240px;">"a dinosaur"</th>
+                  <th style="font-size: 16px;width: 240px;">"a bear"</th>
+
+              </tr>
+              <tr>
+                  <th><a href="assets/Fig1-teaser/wolf/wolf_source-new.mp4"> <video  width="240" src="assets/Fig1-teaser/wolf/wolf_source-new.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/wolf/a_white_cat.mp4"> <video  width="240" src="assets/Fig1-teaser/wolf/a_white_cat.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/candidates/new/wolf/shiny.mp4"> <video  width="240" src="assets/extra/candidates/new/wolf/shiny.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/wolf/a_dinosaur.mp4"> <video  width="240" src="assets/Fig1-teaser/wolf/a_dinosaur.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig1-teaser/wolf/a_bear.mp4"> <video  width="240" src="assets/Fig1-teaser/wolf/a_bear.mp4" autoplay loop controls muted /> </a> </a></th>
+              </tr>
               
               <tr>
-                <th class="sticky">Source Video</th>
-                <th class="sticky-second">VideoSwap (Ours)</th>
-                <th>DDIM-Only</th>
-                <th>DDIM + Tune-A-Video</th>
-                <th>DDIM + T2I-Adapter</th>
+                  <th style="font-size: 16px;width: 240px;">Input video - 90 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"autumn background with maple leaves"</th>
+                  <th style="font-size: 16px;width: 240px;">"a penguin is swimming"</th>
+                  <th style="font-size: 16px;width: 240px;">"a stone is swimming"</th>
+                  <th style="font-size: 16px;width: 240px;">"a pokemon character is swimming"</th>
+              </tr>
+              <tr>
+                  <th><a href="assets/Fig6-main/turtle/source-new.mp4"> <video  width="240" src="assets/Fig6-main/turtle/source-new.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/turtle/autumn_turtle.mp4"> <video  width="240" src="assets/Fig6-main/turtle/autumn_turtle.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/turtle/penguin.mp4"> <video  width="240" src="assets/Fig6-main/turtle/penguin.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/stone.mp4"> <video  width="240" src="assets/extra/stone.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/turtle/pokemon.mp4"> <video  width="240" src="assets/Fig6-main/turtle/pokemon.mp4" autoplay loop controls muted /> </a> </a></th>
               </tr>
 
               <tr>
-                <th class="sticky"><video id="master17" width="300" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/3004_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master17" width="300" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/VideoSwap_3004_7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master17" width="300" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/DDIM_3004_7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master17" width="300" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/TAV_3004_7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master17" class="mainVideo" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/T2I_Adapter_3004_7_V_f35.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master17" class="overlayVideoUpperRight" src="./assets/qualitative_comp/comp_baseline/3004_7_V_f35/3004_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
+                  <th style="font-size: 16px;width: 240px;">Input video - 90 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"a rocket ship is preparing for the launch"</th>
+                  <th style="font-size: 16px;width: 240px;">"a crystal blue Swarovski tower"</th>
+                  <th style="font-size: 16px;width: 240px;">"a candle"</th>
+                  <th style="font-size: 16px;width: 240px;">"anime style"</th>
+
               </tr>
-        
               <tr>
-                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">V <sup>jet</sup></a></th>
+                  <th><a href="assets/Fig6-main/watchtower/watchtower.mp4"> <video  width="240" src="assets/Fig6-main/watchtower/watchtower.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/watchtower/rocket.mp4"> <video  width="240" src="assets/Fig6-main/watchtower/rocket.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/watchtower/swarovski.mp4"> <video  width="240" src="assets/Fig6-main/watchtower/swarovski.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/candle.mp4"> <video  width="240" src="assets/extra/candle.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/watchtower/anime.mp4"> <video  width="240" src="assets/Fig6-main/watchtower/anime.mp4" autoplay loop controls muted /> </a> </a></th>
               </tr>
 
               <tr>
-                <th class="sticky"><video id="master18" width="300" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/2007_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master18" width="300" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/VideoSwap_2007_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master18" width="300" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/DDIM_2007_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master18" width="300" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/TAV_2007_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master18" class="mainVideo" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/T2I_Adapter_2007_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master18" class="overlayVideoUpperRight" src="./assets/qualitative_comp/comp_baseline/2007_11_V_catA/2007_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
+                  <th style="font-size: 16px;width: 240px;">Input video - 90 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"a jeep moving in the grassy field"</th>
+                  <th style="font-size: 16px;width: 240px;">"a spaceship is moving throught the milky way"</th>
+                  <th style="font-size: 16px;width: 240px;">"Van gogh style"</th>
               </tr>
-        
               <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">dog</a> sitting on the side of a car window looking out the window."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
+                  <th><a href="assets/Fig6-main/boat/boat.mp4"> <video  width="240" src="assets/Fig6-main/boat/boat.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/boat/jeep.mp4"> <video  width="240" src="assets/Fig6-main/boat/jeep.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/boat/spaceship.mp4"> <video  width="240" src="assets/Fig6-main/boat/spaceship.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/vangogh.mp4"> <video  width="240" src="assets/extra/vangogh.mp4" autoplay loop controls muted /> </a> </a></th>
               </tr>
 
               <tr>
-                <th class="sticky"><video id="master19" width="300" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/3005_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master19" width="300" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/VideoSwap_3005_8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master19" width="300" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/DDIM_3005_8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master19" width="300" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/TAV_3005_8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master19" class="mainVideo" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/T2I_Adapter_3005_8_V_sailboat.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master19" class="overlayVideoUpperRight" src="./assets/qualitative_comp/comp_baseline/3005_8_V_sailboat/3005_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
+                  <th style="font-size: 16px;width: 240px;">Input video - 8 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"a teddy bear is eating an apple"</th>
+                  <th style="font-size: 16px;width: 240px;">"a monkey is playing on the coast"</th>
+                  <th style="font-size: 16px;width: 240px;">"a golden retriever is eating a banana in the cornfield"</th>
               </tr>
-        
               <tr>
-                <th class="sticky" width="300"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">boat</a> is traveling through the water near a rocky shore."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">boat</a> -> <a style="color: purple;">V <sup>sailboat</sup></a></th>
+                  <th><a href="assets/Fig6-main/monkey/monkey-original.mp4"> <video  width="240" src="assets/Fig6-main/monkey/monkey-original.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/monkey/a-bear-eating-apple.mp4"> <video  width="240" src="assets/Fig6-main/monkey/a-bear-eating-apple.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/monkey/coast.mp4"> <video  width="240" src="assets/Fig6-main/monkey/coast.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/golden.mp4"> <video  width="240" src="assets/extra/golden.mp4" autoplay loop controls muted /> </a> </a></th>
               </tr>
 
               <tr>
-                <th class="sticky"><video id="master20" width="300" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/2004_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master20" width="300" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/VideoSwap_2004_1_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master20" width="300" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/DDIM_2004_1_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master20" width="300" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/TAV_2004_1_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master20" class="mainVideo" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/T2I_Adapter_2004_1_teddy_bear.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master20" class="overlayVideoUpperRight" src="./assets/qualitative_comp/comp_baseline/2004_1_teddy_bear/2004_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
+                  <th style="font-size: 16px;width: 240px;">Input video - 99 Frames</th>
+                  <th style="font-size: 16px;width: 240px;">"a firefighter is stretching"</th>
+                  <th style="font-size: 16px;width: 240px;">"watercolor style"</th>
+                  <th style="font-size: 16px;width: 240px;">"a zombie is stretching"</th>
               </tr>
-        
               <tr>
-                <th width="300" class="sticky"> Source Video: "A <a style="color: blue; font-family: caveat; font-size: 22px;">monkey</a> sitting on the ground eating something."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">teddy bear</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">teddy bear</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">teddy bear</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">teddy bear</a></th>
+                  <th><a href="assets/Fig6-main/woman-stretching/original.mp4"> <video  width="240" src="assets/Fig6-main/woman-stretching/original.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/woman-stretching/firefighter.mp4"> <video  width="240" src="assets/Fig6-main/woman-stretching/firefighter.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig6-main/woman-stretching/watercolor.mp4"> <video  width="240" src="assets/Fig6-main/woman-stretching/watercolor.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/extra/zombie-stretch.mp4"> <video  width="240" src="assets/extra/zombie-stretch.mp4" autoplay loop controls muted /> </a> </a></th>
               </tr>
-
-          </tbody>
-        </table>
-      
-    </div>
-  </div>
-
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
-
+            <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
   <!------------------ END SECTION ------------------>
+
+
+
+
+  <!------------------ BEGIN SECTION ------------------>
+  <!------------------ FIG7 ------------------>
+
+
+  <hr style="height:3px">
+	
+  <h2 id="fig7" align="left"><a name="image-results" id="image-results"></a>Comparisons to Baselines - Figure 7</h2>
+
+  Here we put the complete videos of the images shown in Figure 7. We compare our method with videos used by previous approaches from DAVIS (row 1, 2) and a human video (row 3). We perform comparison with
+  <ul>
+    <li> RAVE w/o Shuffle: our method without the shuffling step.</li>
+    <li> Tokenflow (<a href="#ref-tokenflow">[1]</a>)</li>
+    <li> FateZero (<a href="#ref-fatezero">[2]</a>)</li>
+    <li> Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</li>
+    <li> Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</li>
+    <li> Pix2Video (<a href="#ref-p2v">[5]</a>)</li>
+  </ul>
+  Note that we do not use any customized model (Realistic Vision v5.1) in videos below for fair comparison. Stable Diffusion v1.5 is used for RAVE.
+  <table  width="1200" align="center">
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th> -->
+        <!-- <br/> -->
+        <!-- <tr> <td colspan="8"><br />
+          <p align="left"> Wild TI2I (Generated images) </p>
+          <hr>
+      </td> 
+          </tr> -->
+      <tr>
+        <tr>
+            <th style="font-family: Chalkduster;width:280px;">"Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</th>
+            <th style="font-size: 16px">RAVE</th>
+            <th style="font-size: 16px">RAVE w/o Shuffle </th>
+            <th style="font-size: 16px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+        </tr>
+        <tr>
+            <th><a href="assets/comparison/bear/source-new.mp4"> <video  width="280" src="assets/comparison/bear/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/bear/rave.mp4"> <video  width="280" src="assets/comparison/bear/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/bear/no-shuffle.mp4"> <video  width="280" src="assets/comparison/bear/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/bear/tokenflow.mp4"> <video  width="280" src="assets/comparison/bear/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+          <tr>
+            <th style="font-size: 16px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
+            <th style="font-size: 16px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
+            <th style="font-size: 16px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+            <th style="font-size: 16px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
+        </tr>
+          <tr>
+            <th><a href="assets/comparison/bear/fatezero.mp4"> <video  width="280" src="assets/comparison/bear/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/bear/rerender.mp4"> <video  width="280" src="assets/comparison/bear/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/bear/text2video.mp4"> <video  width="280" src="assets/comparison/bear/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/bear/pix2video.mp4"> <video  width="280" src="assets/comparison/bear/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
+         </tr>
+  </table>
+  <hr style="border: 1px dashed;background-color: black;">
+  <table  width="1200" align="center">
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th> -->
+        <!-- <br/> -->
+        <!-- <tr> <td colspan="8"><br />
+          <p align="left"> Wild TI2I (Generated images) </p>
+          <hr>
+      </td> 
+          </tr> -->
+      <tr>
+        <tr>
+            <th style="font-family: Chalkduster;width:280px;">"a jeep moving at night"</th>
+            <th style="font-size: 16px">RAVE</th>
+            <th style="font-size: 16px">RAVE w/o Shuffle </th>
+            <th style="font-size: 16px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+        </tr>
+        <tr>
+            <th><a href="assets/comparison/car-turn/source-new.mp4"> <video  width="280" src="assets/comparison/car-turn/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/rave.mp4"> <video  width="280" src="assets/comparison/car-turn/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/no-shuffle.mp4"> <video  width="280" src="assets/comparison/car-turn/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/tokenflow.mp4"> <video  width="280" src="assets/comparison/car-turn/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+          <tr>
+            <th style="font-size: 16px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
+            <th style="font-size: 16px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
+            <th style="font-size: 16px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+            <th style="font-size: 16px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
+        </tr>
+          <tr>
+            <th><a href="assets/comparison/car-turn/fatezero.mp4"> <video  width="280" src="assets/comparison/car-turn/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/rerender.mp4"> <video  width="280" src="assets/comparison/car-turn/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/text2video.mp4"> <video  width="280" src="assets/comparison/car-turn/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/car-turn/pix2video.mp4"> <video  width="280" src="assets/comparison/car-turn/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
+         </tr>
+  </table>
+  <hr style="border: 1px dashed;background-color: black;">
+  <table  width="1200" align="center">
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th> -->
+        <!-- <br/> -->
+        <!-- <tr> <td colspan="8"><br />
+          <p align="left"> Wild TI2I (Generated images) </p>
+          <hr>
+      </td> 
+          </tr> -->
+      <tr>
+        <tr>
+            <th style="font-family: Chalkduster;width:280px;">"a senior lady is running"</th>
+            <th style="font-size: 16px">RAVE</th>
+            <th style="font-size: 16px">RAVE w/o Shuffle </th>
+            <th style="font-size: 16px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+        </tr>
+        <tr>
+            <th><a href="assets/comparison/woman-running/source-new.mp4"> <video  width="280" src="assets/comparison/woman-running/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/rave.mp4"> <video  width="280" src="assets/comparison/woman-running/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/no-shuffle.mp4"> <video  width="280" src="assets/comparison/woman-running/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/tokenflow.mp4"> <video  width="280" src="assets/comparison/woman-running/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+          <tr>
+            <th style="font-size: 16px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
+            <th style="font-size: 16px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
+            <th style="font-size: 16px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+            <th style="font-size: 16px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
+        </tr>
+          <tr>
+            <th><a href="assets/comparison/woman-running/fatezero.mp4"> <video  width="280" src="assets/comparison/woman-running/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/rerender.mp4"> <video  width="280" src="assets/comparison/woman-running/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/text2video.mp4"> <video  width="280" src="assets/comparison/woman-running/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/woman-running/pix2video.mp4"> <video  width="280" src="assets/comparison/woman-running/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
+         </tr>
+  </table>
+  <!------------------ END SECTION ------------------>
+
+
+
+
+
+
+
+
+  <!------------------ BEGIN SECTION ------------------>
+  <!------------------ ADDITIONAL COMPARISON ------------------>
+
+  <!-- <p>&nbsp;</p> -->
+  <hr style="height:3px">
+	
+  <h2 id="additional-comparison" align="left"><a name="image-results" id="image-results"></a>Additional Comparisons to Baselines</h2>
+  Here we put extra comparisons with additional baselines:
+  <ul>
+    <li>  FLATTEN (<a href="#ref-flatten">[6]</a>)</li>
+    <li>  Tune-A-Video (<a href="#ref-tav">[7]</a>)</li>
+    <li>  ControlVideo (<a href="#ref-control">[8]</a>)</li>
+    <li>  Gen-1 (<a href="#ref-gen1">[9]</a>)</li>
+  </ul>
+
+  Note that we conduct a direct qualitative comparison with previous approaches
+   by directly acquiring videos from the corresponding project webpages. 
+   The first comparison involves trucks from FLATTEN, and the second comparison involves stork from Tokenflow.
+  <table  width="1200" align="center">
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th> -->
+        <!-- <br/> -->
+        <!-- <tr> <td colspan="8"><br />
+          <p align="left"> Wild TI2I (Generated images) </p>
+          <hr>
+      </td> 
+          </tr> -->
+      <tr>
+        <tr>
+            <th style="font-family: Chalkduster;width:280px;">"wooden trucks drive on a racetrack"</th>
+            <th style="font-size: 16px">RAVE</th>
+            <th style="font-size: 16px">FLATTEN (<a href="#ref-flatten">[6]</a>)</th>
+            <th style="font-size: 16px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+        </tr>
+        <tr>
+            <th><a href="assets/comparison/wood-truck/truck_source-new.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/rave.mp4"> <video  width="280" src="assets/comparison/wood-truck/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/truck_flatten.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_flatten.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/truck_tokenflow.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+          <tr>
+            <th style="font-size: 16px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
+            <th style="font-size: 16px">Tune-A-Video (<a href="#ref-tav">[7]</a>)</th>
+            <th style="font-size: 16px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+            <th style="font-size: 16px">ControlVideo (<a href="#ref-control">[8]</a>)</th>
+        </tr>
+          <tr>
+            <th><a href="assets/comparison/wood-truck/truck_fatezero.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/truck_tuneavideo.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_tuneavideo.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/truck_t2vzero.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_t2vzero.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/comparison/wood-truck/truck_controlvideo.mp4"> <video  width="280" src="assets/comparison/wood-truck/truck_controlvideo.mp4" autoplay loop controls muted/> </a> </a></th>
+         </tr>
+  </table>
+  <hr style="border: 1px dashed;background-color: black;">
+  <table  width="1200" align="center">
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th> -->
+        <!-- <br/> -->
+        <!-- <tr> <td colspan="8"><br />
+          <p align="left"> Wild TI2I (Generated images) </p>
+          <hr>
+      </td> 
+          </tr> -->
+      <tr>
+        <tr>
+            <th style="font-family: Chalkduster;width:280px;">"an origami of stork"</th>
+            <th style="font-size: 16px">RAVE</th>
+            <th style="font-size: 16px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+            <th style="font-size: 16px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
+        </tr>
+        <tr>
+            <th><a href="assets/extra/candidates/new/stork/source-new.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/rave.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/tokenflow.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/rerender_fps_30.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/rerender_fps_30.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+          <tr>
+            <th style="font-size: 16px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
+            <th style="font-size: 16px">Gen-1 (<a href="#ref-gen1">[9]</a>)</th>
+            <th style="font-size: 16px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+            <th style="font-size: 16px">Tune-A-Video (<a href="#ref-tav">[7]</a>)</th>
+        </tr>
+          <tr>
+            <th><a href="assets/extra/candidates/new/stork/fatezero_30_fps.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/fatezero_30_fps.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/gen1_fps30.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/gen1_fps30.mp4" autoplay loop controls muted /> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/txt2vid_fps30.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/txt2vid_fps30.mp4" autoplay loop controls muted/> </a> </a></th>
+            <th><a href="assets/extra/candidates/new/stork/tav_fps30.mp4"> <video  width="280" src="assets/extra/candidates/new/stork/tav_fps30.mp4" autoplay loop controls muted/> </a> </a></th>
+          </tr>
+  </table>
+
+<!------------------ END SECTION ------------------>
+
+
+
+
+
+
 
 
 <!------------------ BEGIN SECTION ------------------>
-  <p>&nbsp;</p>
-	<hr>
-	<h2 id="ablation_container" align="center">Ablation Studies</h2>
+<!------------------ Extreme ------------------>
 
-  <p style="font-size: large" width="1000"> 
-    In this section, we provide ablation study results of our method as mentioned in the paper. <br>
-    Please refer to <a style="color:red">Sec. 4.3</a> in the paper for more details.
-  </p>
-
-  <h3 id="sparse_motion_feature" align="left">1. Sparse Motion Feature</h3>
-
-  <p style="font-size: large" width="1000"> 
-    To incorporate semantic points as correspondence, we generate sparse motion features by placing the projected DIFT-Embedding in an empty feature.
-    When compared to other point encoding variants, this method yields <a style="color: red;">superior motion alignment and video quality</a>, with <a style="color: red;">the least registration time-cost</a>.
-  </p>
-
-  <p>&nbsp;</p>
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
-
-  <div class="scrollable-table-container" id="comp_previous">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-            <tbody>
-              
-              <tr>
-                <th class="sticky">Source Video</th>
-                <th class="sticky-second">DIFT Embedding + MLP (Ours)<br>100 Iters</th>
-                <th>Point Map + T2I-Adapter<br>100 Iters</th>
-                <th>Learnable Embedding + MLP<br>100 Iters</th>
-                <th>Learnable Embedding + MLP<br>300 Iters</th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master23" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/2004_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master23" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/videoswap_2004_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master23" class="mainVideo" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/t2iadapter_2004_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master23" class="overlayVideoUpperRight" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/2004_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
-                <th><video data-master-id="master23" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/learnemb_mlp_100iter_2004_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master23" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2004_monkey/learnemb_mlp_300iter_2004_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">monkey</a> sitting on the ground eating something."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">monkey</a> -> <a style="color: purple;">tiger</a></th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master31" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/2007_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master31" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/videoswap_2007dogcar.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th>
-                  <div class="videoContainer">
-                    <video data-master-id="master31" class="mainVideo" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/videoswap_2007_dogcar_t2i.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                    <video data-master-id="master31" class="overlayVideoUpperRight" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/2007_condition.mp4" autoplay="" loop="" controls="" muted=""> </video>
-                  </div>
-                </th>
-                <th><video data-master-id="master31" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/videoswap_2007_dogcar_learn100.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master31" width="300" src="./assets/ablation_study/1_explicit_emb_mlp/2007_dogcar/videoswap_2007_dogcar_learn300.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">dog</a> sitting on the side of a car window looking out the window."</th>
-                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              </tr>
-
-          </tbody>
-        </table>
-      
-    </div>
-  </div>
-
-  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-  <p>&nbsp;</p>
-
-  <h3 id="point_patch_loss" align="left">2. Point Patch Loss</h3>
-
-  <p style="font-size: large" width="1000"> 
-    To enhance the learning of semantic point correspondence, we limit the computation of diffusion loss to a small patch around each semantic point.
-    This approach prevents the structure of the source subject from leaking into the target swap, <a style="color: red;">eliminating artifacts caused by structure leakage</a>.
-  </p>
-
-  <div class="scrollable-table-container" id="comp_previous">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-            <tbody>
-              
-              <tr>
-                <th class="sticky">Source Video</th>
-                <th>w/ Point Patch Loss (Ours)</th>
-                <th>w/o Point Patch Loss</th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master24" width="300" src="./assets/ablation_study/2_point_patch_loss/2005_elk/2005_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master24" width="300" src="./assets/ablation_study/2_point_patch_loss/2005_elk/2005_w_point_patch_loss_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master24" width="300" src="./assets/ablation_study/2_point_patch_loss/2005_elk/2005_wo_point_path_loss_7_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">elk</a> standing and turning its head in a field."</th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master27" width="300" src="./assets/ablation_study/2_point_patch_loss/2009_cat/2009_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master27" width="300" src="./assets/ablation_study/2_point_patch_loss/2009_cat/2009_w_point_patch_loss_9_VdogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master27" width="300" src="./assets/ablation_study/2_point_patch_loss/2009_cat/2009_wo_point_patch_loss_9_VdogB.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">cat</a> is walking on the floor at a room."</th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">cat</a> -> <a style="color: purple;">V <sup>dogB</sup></a></th>
-              </tr>
-              
-              <tr>
-                <th class="sticky"><video id="master28" width="300" src="./assets/ablation_study/2_point_patch_loss/3004_airplane/3004_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master28" width="300" src="./assets/ablation_study/2_point_patch_loss/3004_airplane/3004_w_point_patch_loss_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master28" width="300" src="./assets/ablation_study/2_point_patch_loss/3004_airplane/3004_wo_point_patch_loss_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-        
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-              </tr>
-          </tbody>
-        </table>
-      
-    </div>
-  </div>
-
-  <p>&nbsp;</p>
-
-  <h3 id="semantic_enhanced_schedule" align="left">3. Semantic-Enhanced Schedule</h3>
-
-  <p style="font-size: large" width="1000"> 
-    To enhance the learning of semantic point correspondence, we prioritize registering semantic points at higher timesteps (i.e., \(t \in [0.5T, T)\)), thereby <a style="color: red;">enhancing semantic point alignment</a>.
-  </p>
-
-  <div class="scrollable-table-container" id="comp_previous">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-            <tbody>
-              <tr>
-                <th class="sticky">Source Video</th>
-                <th>Register Semantic Point at <br> \(t \in [0.5T, T)\) (Ours) </th>
-                <th>Register Semantic Point at <br> \(t \in [0, T)\) </th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master25" width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master25" width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_t05_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master25" width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_t0_11_V_catA.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-              
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">dog</a> sitting on the side of a car window looking out the window."</th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">dog</a> -> <a style="color: purple;">V <sup>catA</sup></a></th>
-              </tr>
-
-              <tr>
-                <td colspan="3">&nbsp;</td>
-              </tr>
-
-              <tr>
-                <th class="sticky">14-th source frame (semantic point visualization)</th>
-                <th> Register Semantic Point at <br> \(t \in [0.5T, T)\) (Ours) </th>
-                <th> Register Semantic Point at <br> \(t \in [0, T)\) </th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><img width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_00014_source_vispoint.jpg" alt="Reference of the customized conecpts"> </th>
-                <th><img width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_catA_t05_frame14.jpg" alt="Reference of the customized conecpts"> </th>
-                <th><img width="300" src="./assets/ablation_study/3_tune_early_timestep/2007_car_dog/2007_catA_t0_frame14.jpg" alt="Reference of the customized conecpts"> </th>
-              </tr>
-
-              <tr>
-                <td colspan="3">&nbsp;</td>
-              </tr>
-              <tr>
-                <td colspan="3">&nbsp;</td>
-              </tr>
-
-              <tr>
-                <th class="sticky">Source Video</th>
-                <th>Register Semantic Point at <br> \(t \in [0.5T, T)\) (Ours) </th>
-                <th>Register Semantic Point at <br> \(t \in [0, T)\) </th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><video id="master29" width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master29" width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_Vporsche_t05.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master29" width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_Vporsche_t0.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              </tr>
-
-              <tr>
-                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside."</th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">V <sup>porsche</sup></a></th>
-                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">V <sup>porsche</sup></a></th>
-              </tr>
-
-              <tr>
-                <td colspan="3">&nbsp;</td>
-              </tr>
-              
-              <tr>
-                <th class="sticky">14-th source frame (semantic point visualization)</th>
-                <th> Register Semantic Point at <br> \(t \in [0.5T, T)\) (Ours) </th>
-                <th> Register Semantic Point at <br> \(t \in [0, T)\) </th>
-              </tr>
-
-              <tr>
-                <th class="sticky"><img width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_00014_source_vispoint.jpg" alt="Reference of the customized conecpts"> </th>
-                <th><img width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_Vporsche_t05_frame14.jpg" alt="Reference of the customized conecpts"> </th>
-                <th><img width="300" src="./assets/ablation_study/3_tune_early_timestep/3002_car_turn/3002_Vporsche_t0_frame14.jpg" alt="Reference of the customized conecpts"> </th>
-              </tr>
-
-          </tbody>
-        </table>
-      
-    </div>
-  </div>
-
-  <p>&nbsp;</p>
-
-  <h3 id="drag_based_control" align="left">4. Drag-based Point Control</h3>
-
-  <p style="font-size: large" width="1000"> 
-    VideoSwap supports dragging point at one keyframe. We <a style="color: red;">propagate the dragged displacement throughout the entire video, resulting in a consistent dragged trajectory</a>.
-    By adopting the dragged trajectory as motion guidance, we can <a style="color: red;">reveal the correct shape of target concept</a>. 
-  </p>
-
-  <table width="1200" align="center">
-    <tbody>
-      <tr>
-        <th><p style="font-family: Chalkduster;" align="center"><a style="color: black;">Reference Images for Customized Concepts:</p></th>
-        <th><img height="200" src="./assets/custom_refer/refer_drag.png" alt="Reference of the customized conecpts"></th>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>&nbsp;</p>
-
-  <div class="scrollable-table-container" id="comp_previous">
-    <div id="scrollableTableWrapper">
-      <table width="1200" align="center" class="video-no-container">
-          <tbody>
-            
-            <tr>
-              <th rowspan=4>
-                Keyframe <br> 
-                <img width="300" src="./assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_keyframe.png" alt="Reference of the customized conecpts"> <br>
-                Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">black swan</a> swimming in a pond." <br>
-                Target Swap: <a style="color: blue; font-family: caveat; font-size: 25px;">black swan</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;">duck</a>
-              </th>
-              <th>Source Point Trajectory </th>
-              <th>Result Guided by Source Point Trajectory</th>
-            </tr>
-
-            <tr>
-              <th><video id="master26" width="300" src="./assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_source_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master26" width="300" src="./assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_source_6_duck_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-            
-            <tr>
-              <th>Dragged Point Trajectory </th>
-              <th>Result Guided by Dragged Point Trajectory</th>
-            </tr>
-
-            <tr>
-              <th><video data-master-id="master26" width="300" src="./assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_drag_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master26" width="300" src="./assets/ablation_study/4_point_displacement_propagation/2003_swan/2003_drag_6_duck_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-            <tr>
-              <td colspan="3">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="3">&nbsp;</td>
-            </tr>
-
-            <tr>
-              <th rowspan=4>
-                Keyframe <br> 
-                <img width="300" src="./assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_keyframe.png" alt="Reference of the customized conecpts"> <br>
-                Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside." <br>
-                Target Swap: <a style="color: blue; font-family: caveat; font-size: 25px;">silver jeep</a> -> <a style="color: purple; font-family: caveat; font-size: 25px;">V <sup>carA</sup></a>
-              </th>
-              <th>Source Point Trajectory </th>
-              <th>Result Guided by Source Point Trajectory</th>
-            </tr>
-
-            <tr>
-              <th><video id="master30" width="300" src="./assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_source_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master30" width="300" src="./assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_source_carA_vis.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-            
-            <tr>
-              <th>Dragged Point Trajectory </th>
-              <th>Result Guided by Dragged Point Trajectory</th>
-            </tr>
-
-            <tr>
-              <th><video data-master-id="master30" width="300" src="./assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_drag_vispoint.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-              <th><video data-master-id="master30" width="300" src="./assets/ablation_study/4_point_displacement_propagation/3002_car_turn/3002_drag_carA_vis.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            </tr>
-
-        </tbody>
-      </table>
-      
-    </div>
-  </div>
-
-<!------------------ END SECTION ------------------>
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
   
+<h2 id="extreme" align="left"><a name="image-results" id="image-results"></a>Extreme Shape Editing</h2>
 
+
+Here, we provide examples of extreme shape editing on the car-turn videos, transforming the car into various entities such as 
+a train, a tractor, a black van, a firetruck, and a tank. These transformations require significant changes in the output. 
+Our method adeptly handles such extreme shape editing.
+
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="font-size: 16px;width: 300px;">Input Video - 27 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"Switzerland SBB CFF FFS train"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a tractor"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extreme-shape/source.mp4">  <video  width="300" src="assets/extreme-shape/source.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extreme-shape/sbb.mp4">  <video  width="300" src="assets/extreme-shape/sbb.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extreme-shape/tractor.mp4">  <video  width="300" src="assets/extreme-shape/tractor.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+        <tr>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a black van"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a firetruck"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a tank"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extreme-shape/blackvan.mp4">  <video  width="300" src="assets/extreme-shape/blackvan.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extreme-shape/firetruck.mp4">  <video  width="300" src="assets/extreme-shape/firetruck.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/tank.mp4">  <video  width="300" src="assets/extra/tank.mp4" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+
+<!------------------ END SECTION ------------------>	
+
+
+
+<!------------------ BEGIN SECTION ------------------>
+<!------------------ ADDITIONAL ------------------>
+
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+  
+<h2 id="additional" align="left"><a name="image-results" id="image-results"></a>Additional Qualitative Results</h2>
+
+Here we provide additional qualitative results with RAVE.
+
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="width: 300px;">Input Video - 144 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"whales are swimming"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"banknotes are falling from the sky"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"fire in the woods"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/fish_group/source-new.mp4">  <video  width="300" src="assets/extra/candidates/fish_group/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/fish_group/whales.mp4">  <video  width="300" src="assets/extra/candidates/fish_group/whales.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/fish_group/banknotes.mp4">  <video  width="300" src="assets/extra/candidates/fish_group/banknotes.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/fish_group/fire.mp4">  <video  width="300" src="assets/extra/candidates/fish_group/fire.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 36 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"Electric neon colors illuminate the scene, casting a futuristic, cyberpunk vibe"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"Soft, blended colors and visible brushstrokes make the scene appear as if painted with watercolors"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"The bear becomes a dark silhouette against a fiery sunset, with the horizon painted in oranges, reds, and purples"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/new/bear/source-new.mp4">  <video  width="300" src="assets/extra/candidates/new/bear/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/bear/neon.mp4">  <video  width="300" src="assets/extra/candidates/new/bear/neon.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/bear/soft.mp4">  <video  width="300" src="assets/extra/candidates/new/bear/soft.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/bear/dark.mp4">  <video  width="300" src="assets/extra/candidates/new/bear/dark.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 256px;">Input Video - 36 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 256px;">"An intense, fiery sky with embers floating around, contrasting the cool water and highlighting the flamingos' grace amid nature's fury"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 256px;">"Mystical surroundings with magical creatures, sparkles on the water, and an aura of enchantment"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 256px;">"The flamingos in deep shadow, set against a radiant sunset with oranges, purples, and pinks"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/new/flamingo/source-new.mp4">  <video  width="256" src="assets/extra/candidates/new/flamingo/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/flamingo/intense.mp4">  <video  width="256" src="assets/extra/candidates/new/flamingo/intense.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/flamingo/mystical.mp4">  <video  width="256" src="assets/extra/candidates/new/flamingo/mystical.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/flamingo/shadow.mp4">  <video  width="256" src="assets/extra/candidates/new/flamingo/shadow.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 18 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"swarovski blue crystal swan"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"crochet swan"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/new/blackswan/source-new.mp4">  <video  width="300" src="assets/extra/candidates/new/blackswan/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/blackswan/swarovski.mp4">  <video  width="300" src="assets/extra/candidates/new/blackswan/swarovski.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/blackswan/crochet.mp4">  <video  width="300" src="assets/extra/candidates/new/blackswan/crochet.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 8 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"swarovski blue crystal stones falling down sequentially"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"crochet boxes, falling down sequentially"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/new/dominos/source-new.mp4">  <video  width="300" src="assets/extra/candidates/new/dominos/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/dominos/swarovski.mp4">  <video  width="300" src="assets/extra/candidates/new/dominos/swarovski.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/dominos/crochet.mp4">  <video  width="300" src="assets/extra/candidates/new/dominos/crochet.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 36 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a black panther"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a pink dragon"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a lion"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/new/wolf/source-new.mp4">  <video  width="300" src="assets/extra/candidates/new/wolf/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/wolf/a_black_panther.mp4">  <video  width="300" src="assets/extra/candidates/new/wolf/a_black_panther.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/wolf/a_pink_dragon.mp4">  <video  width="300" src="assets/extra/candidates/new/wolf/a_pink_dragon.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/wolf/a_lion.mp4">  <video  width="300" src="assets/extra/candidates/new/wolf/a_lion.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 240px;">Input Video - 45 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 240px;">"an astronout is typing"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 240px;">"a medieval knight"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 240px;">"a man from avatar movie is typing"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 240px;">"a robot is typing"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/Fig1-teaser/typing/typing_source-new.mp4">  <video  width="240" src="assets/Fig1-teaser/typing/typing_source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/typing/astro.mp4">  <video  width="240" src="assets/extra/candidates/new/typing/astro.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/typing/knight.mp4">  <video  width="240" src="assets/extra/candidates/new/typing/knight.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/typing/avatar.mp4">  <video  width="240" src="assets/extra/candidates/new/typing/avatar.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/new/typing/robot.mp4">  <video  width="240" src="assets/extra/candidates/new/typing/robot.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 72 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"zombies are dancing"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a black person"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"watercolor style"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/gangnam/source-new.mp4">  <video  width="300" src="assets/extra/candidates/gangnam/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/gangnam/zombies.mp4">  <video  width="300" src="assets/extra/candidates/gangnam/zombies.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/gangnam/black.mp4">  <video  width="300" src="assets/extra/candidates/gangnam/black.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/gangnam/watercolor.mp4">  <video  width="300" src="assets/extra/candidates/gangnam/watercolor.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+      <tr>
+          <th style="width: 300px;">Input Video - 117 Frames</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a red tshirt"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a robot"</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"neon colors in cypberpunk style"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/extra/candidates/moonwalk/source-new.mp4">  <video  width="300" src="assets/extra/candidates/moonwalk/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/moonwalk/red.mp4">  <video  width="300" src="assets/extra/candidates/moonwalk/red.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/moonwalk/robot.mp4">  <video  width="300" src="assets/extra/candidates/moonwalk/robot.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/extra/candidates/moonwalk/neon.mp4">  <video  width="300" src="assets/extra/candidates/moonwalk/neon.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<!------------------ END SECTION ------------------>	
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------ BEGIN SECTION ------------------>
+<!------------------ FIG2 ------------------>
+
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+
+<h2 id="fig2" align="left"><a name="image-results" id="image-results"></a>Comparison with Existing Attention Modules - Figure 2</h2>
+Here we show the complete videos of the images shown in Figure 2. We compare our method with:
+<ul>
+  <li> Self Attention only.</li>
+  <li> Sparse-Causal Attention</li>
+</ul>
+While the generated frames align with the text prompt in terms of motion and color style, they lack consistency 
+due to the neglect of temporal context as seen in the inconsistencies in the background and the car's bumper when using self attention only.
+The sparse-causal attention method produces more consistent frames with reduced time complexity, 
+however, its performance tends to decline in longer videos due to the diminishing temporal awareness as can be seen from the structural changes in the car.
+RAVE produces consistent frames with the correct motion and color style throughout the video.
+
+<!-- <br/> -->
+
+<!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
+<!-- <hr> -->
+<!-- <br/> -->
+
+<table  width="1200" align="center" >
+  <tbody>
+    <!-- <th>A</th>
+    <th>B</th>
+    <th>C</th> -->
+              <tr>
+                  <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a red car, moving on the road, autumn, maple leaves"</th>
+                  <th style="font-size: 16px;width: 300px;">RAVE</th>
+                  <th style="font-size: 16px;width: 300px;">Self Attention</th>
+                  <th style="font-size: 16px;width: 300px;">Sparse-Causal Attention</th>
+              </tr>
+              <tr>
+                  <th><a href="assets/Fig2-attention/figure-2-car-turn.mp4"> <video  width="300" src="assets/Fig2-attention/figure-2-car-turn.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig2-attention/frames-grid_shuffle.mp4"> <video  width="300" src="assets/Fig2-attention/frames-grid_shuffle.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig2-attention/frames-single_frame_attention.mp4"> <video  width="300" src="assets/Fig2-attention/frames-single_frame_attention.mp4" autoplay loop controls muted /> </a> </a></th>
+                  <th><a href="assets/Fig2-attention/frames-cross_frame_attention.mp4"> <video  width="300" src="assets/Fig2-attention/frames-cross_frame_attention.mp4" autoplay loop controls muted /> </a> </a></th>
+              </tr>
+            <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+  <!------------------ END SECTION ------------------>
+
+
+
+
+  <!------------------ BEGIN SECTION ------------------>
+  <!------------------ FIG5 ------------------>
+
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+
+<h2 id="fig5" align="left"><a name="image-results" id="image-results"></a>Consistency Across Grids - Figure 5</h2>
+We present the editing results in three scenarios: 
+<ul>
+  <li> Grid: processing grids independently, </li>
+  <li> Grid + SC: adapting sparse-causal (SC) attention using grids </li>
+  <li> RAVE </li>
+</ul>
+  While the grid technique enables consistent editing, ensuring consistency across 
+  multiple grids remains a challenge. One could modify well-known attention mechanisms, 
+  like sparse-causal attention, for the grid structure. In this adaptation, attention 
+  is shifted from focusing on the initial frame and the previous frame to the initial grid
+  and the previous grid.  However, this approach can still face difficulties in maintaining 
+  consistency with longer videos. Our novel approach RAVE, on the other hand, is able to preserve the consistency.
+<!-- <br/> -->
+
+<!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
+<!-- <hr> -->
+<!-- <br/> -->
+<table  width="1200" align="center" >
+<tbody>
+  <!-- <th>A</th>
+  <th>B</th>
+  <th>C</th> -->
+            <tr>
+                <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a pink car in a snowy landscape, sunset lighting"</th>
+                <th style="font-size: 16px;width: 300px;">RAVE</th>
+                <th style="font-size: 16px;width: 300px;">Grid</th>
+                <th style="font-size: 16px;width: 300px;">Grid + SC</th>
+            </tr>
+            <tr>
+                <th><a href="assets/Fig5-grid_ablation/source-new.mp4"> <video  width="300" src="assets/Fig5-grid_ablation/source-new.mp4" autoplay loop controls muted /> </a> </a></th>
+                <th><a href="assets/Fig5-grid_ablation/rave.mp4"> <video  width="300" src="assets/Fig5-grid_ablation/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+                <th><a href="assets/Fig5-grid_ablation/grid-no-shuffle.mp4"> <video  width="300" src="assets/Fig5-grid_ablation/grid-no-shuffle.mp4" autoplay loop controls muted /> </a> </a></th>
+                <th><a href="assets/Fig5-grid_ablation/grid-sparse-causal.mp4"> <video  width="300" src="assets/Fig5-grid_ablation/grid-sparse-causal.mp4" autoplay loop controls muted /> </a> </a></th>
+            </tr>
+          <tr> <td><br /></td> </tr>
+</tbody>
+</table>
 <!------------------ END SECTION ------------------>
 
-<p>&nbsp;</p>
-
-<h2 id="ref" align="left"><a name="ref" id="ref"></a>References</h2>
 
 
 
-<p>
-	<a name="ref-rerender" id="ref-rerender"></a>
-  [1] Shuai Yang, Yifan Zhou, Ziwei Liu and Chen Change Loy. Rerender A Video: Zero-Shot Text-Guided Video-to-Video Translation. SIGGRAPH Asia, 2023.
-</p>
 
-<p>
-	<a name="ref-tokenflow" id="ref-tokenflow"></a>
-  [2] Michal Geyer, Omer Bar-Tal, Shai Bagon and Tali Dekel. Tokenflow: Consistent diffusion features for consistent video editing. arXiv preprint arXiv:2307.10373, 2023.
-</p>
+<!------------------ BEGIN SECTION ------------------>
+<!------------------ FIG8 ------------------>
 
-<p>
-	<a name="ref-t2vzero" id="ref-t2vzero"></a>
-  [3] Levon Khachatryan, Andranik Movsisyan, Vahram Tadevosyan, Roberto Henschel, Zhangyang Wang, Shant Navasardyan and Humphrey Shi. Text2video-zero: Text-to-image diffusion models are zero-shot video generators. ICCV, 2023.
-</p>
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+  
+<h2 id="fig8" align="left"><a name="image-results" id="image-results"></a>Ablations</h2>
+We conduct an ablation study by separately ablating `shuffling', `DDIM inversion', and ControlNet conditions 
+(lineart, softedge and depth (RAVE)) in our framework. Applying shuffling helps maintaining global style 
+consistency. Additionally, using DDIM inversion contributes to preserving the structure similar to the 
+original video. 
 
-<p>
-	<a name="ref-stablevideo" id="ref-stablevideo"></a>
-  [4] Wenhao Chai, Xun Guo, Gaoang Wang and Yan Lu. Stablevideo: Text-driven consistency-aware diffusion video editing. ICCV, 2023.
-</p>
+<h3> DDIM inversion and Shuffling Ablation - Figure 8</h3>
+<table  width="1200" align="center">
+  <tbody>
 
-<p>
-	<a name="ref-tav" id="ref-tav"></a>
-  [5] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Weixian Lei, Yuchao Gu, Wynne Hsu, Ying Shan, Xiaohu Qie and Mike Zheng Shou. Tune-a-video: One-shot tuning of image diffusion models for text-to-video generation. ICCV, 2023.
-</p>
+      <tr>
+          <th style="font-family: Chalkduster">"dark chocolate cake"</th>
+          <th style="font-size: 16px">RAVE</th>
+          <th style="font-size: 16px">w/o Shuffling </th>
+          <th style="font-size: 16px">w/o DDIM Inversion </th>
+      </tr>
+      <tr>
+          <th><a href="assets/Fig8-main-ablation/train.mp4"> <video  width="300" src="assets/Fig8-main-ablation/train.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/rave.mp4"> <video  width="300" src="assets/Fig8-main-ablation/rave.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/wo_shuffle.mp4"> <video  width="300" src="assets/Fig8-main-ablation/wo_shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/wo_ddim.mp4"> <video  width="300" src="assets/Fig8-main-ablation/wo_ddim.mp4" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr>
 
-<p>
-	<a name="ref-fatezero" id="ref-fatezero"></a>
-  [6] Chenyang Qi, Xiaodong Cun, Yong Zhang, Chenyang Lei, Xintao Wang, Ying Shan and Qifeng Chen. FateZero: Fusing Attentions for Zero-shot Text-based Video Editing. ICCV, 2023.
-</p>
+<h3> Condition Ablation - Figure 8</h3>
 
-<p>
-	<a name="ref-animatediff" id="ref-animatediff"></a>
-	[7] Yuwei Guo, Ceyuan Yang, Anyi Rao, Yaohui Wang, Yu Qiao, Dahua Lin, and Bo Dai. Animatediff: Animate your personalized text-to-image diffusion models without specific tuning. arXiv preprint arXiv:2307.04725, 2023.
-</p>
+Furthermore, our approach proves to be adaptable to different controls, such as lineart
+and softedge compared to depth used in RAVE. Even though there are style differences, these adjustments do not compromise the overall consistency. 
 
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="font-family: Chalkduster">"dark chocolate cake"</th>
+          <th style="font-size: 16px">RAVE (Depth)</th>
+          <th style="font-size: 16px">w/ Lineart </th>
+          <th style="font-size: 16px">w/ Softedge </th>
+      </tr>
+      <tr>
+          <th><a href="assets/Fig8-main-ablation/train.mp4"> <video  width="300" src="assets/Fig8-main-ablation/train.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/rave.mp4"> <video  width="300" src="assets/Fig8-main-ablation/rave.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/lineart.mp4"> <video  width="300" src="assets/Fig8-main-ablation/lineart.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/softedge.mp4"> <video  width="300" src="assets/Fig8-main-ablation/softedge.mp4" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr>
+          <th></th>
+          <th style="font-size: 16px">Depth Control</th>
+          <th style="font-size: 16px">Lineart Control</th>
+          <th style="font-size: 16px">Softedge Control</th>
+      </tr>
+      <tr>
+          <th></th>
+          <th><a href="assets/Fig8-main-ablation/depth-control.mp4"> <video  width="300" src="assets/Fig8-main-ablation/depth-control.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/lineart-control.mp4"> <video  width="300" src="assets/Fig8-main-ablation/lineart-control.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/Fig8-main-ablation/softedge-control.mp4"> <video  width="300" src="assets/Fig8-main-ablation/softedge-control.mp4" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3> Realistic Vision vs Stable Diffusion</h3>
+To demonstrate that the enhancement in the video editing 
+is not solely attributed to the use of a customized model, 
+Realistic Vision V5.1, we further conduct a comparison with 
+the outcomes obtained using Stable Diffusion v1.5. Note that 
+we employ Realistic Vision V5.1 to leverage its diverse editing capabilities.
+
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"sandwiches are moving on the railroad"</th>
+          <th style="font-size: 16px;width: 300px;">Stable Diffusion</th>
+          <th style="font-size: 16px;width: 300px;">Realistic Vision v5.1 </th>
+      </tr>
+      <tr>
+          <th><a href="assets/realistic-ablation/train/source-new.mp4"> <video  width="300" src="assets/realistic-ablation/train/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/realistic-ablation/train/sd.mp4"> <video  width="300" src="assets/realistic-ablation/train/sd.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/realistic-ablation/train/realistic.mp4"> <video  width="300" src="assets/realistic-ablation/train/realistic.mp4" autoplay loop controls muted/> </a> </a></th>  
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a white cat"</th>
+          <th style="font-size: 16px;width: 300px;">Stable Diffusion</th>
+          <th style="font-size: 16px;width: 300px;">Realistic Vision v5.1 </th>
+      </tr>
+      <tr>
+          <th><a href="assets/realistic-ablation/wolf/wolf_source-new.mp4"> <video  width="300" src="assets/realistic-ablation/wolf/wolf_source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/realistic-ablation/wolf/sd-wolf-cat.mp4"> <video  width="300" src="assets/realistic-ablation/wolf/sd-wolf-cat.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/realistic-ablation/wolf/realistic_a_white_cat.mp4"> <video  width="300" src="assets/realistic-ablation/wolf/realistic_a_white_cat.mp4" autoplay loop controls muted/> </a> </a></th>  
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+        <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"watercolor style"</th>
+        <th style="font-size: 16px;width: 300px;">Stable Diffusion</th>
+        <th style="font-size: 16px;width: 300px;">Realistic Vision v5.1 </th>
+      </tr>
+      <tr>
+        <th><a href="assets/extra/candidates/new/dog-car/source-new.mp4"> <video  width="300" src="assets/extra/candidates/new/dog-car/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/extra/candidates/new/sd-realistic/sd-dog-car.mp4"> <video  width="300" src="assets/extra/candidates/new/sd-realistic/sd-dog-car.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/extra/candidates/new/sd-realistic/realistic-dog-car.mp4"> <video  width="300" src="assets/extra/candidates/new/sd-realistic/realistic-dog-car.mp4" autoplay loop controls muted/> </a> </a></th>  
+      </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+        <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a teddy bear is eating an apple"</th>
+        <th style="font-size: 16px;width: 300px;">Stable Diffusion</th>
+        <th style="font-size: 16px;width: 300px;">Realistic Vision v5.1 </th>
+      </tr>
+      <tr>
+        <th><a href="assets/Fig6-main/monkey/monkey-original.mp4"> <video  width="300" src="assets/Fig6-main/monkey/monkey-original.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/extra/candidates/new/sd-realistic/sd-monkey.mp4"> <video  width="300" src="assets/extra/candidates/new/sd-realistic/sd-monkey.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/extra/candidates/new/sd-realistic/realistic-monkey.mp4"> <video  width="300" src="assets/extra/candidates/new/sd-realistic/realistic-monkey.mp4" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+
+<h3> Ebsynth (<a href="#ref-ebsynth">[10]</a>)</h3>
+Here we perform a comparison with Ebsynth, a keyframe propogation method,
+is combined with the Grid without shuffling approach. It is evident that significant changes occur 
+in the structure of the car and bear. In contrast, our approach demonstrates superior handling of 
+temporal structural consistency.
+<table  width="1200" align="center">
+
+      <!-- <br/> -->
+      <!-- <tr> <td colspan="8"><br />
+        <p align="left"> Wild TI2I (Generated images) </p>
+        <hr>
+    </td> 
+        </tr> -->
+    <tr>
+      <tr>
+          <th style="font-family: Chalkduster;width:360px;">"Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</th>
+          <th style="font-size: 16px">RAVE</th>
+          <th style="font-size: 16px">Ebsynth</th>
+      </tr>
+      <tr>
+          <th><a href="assets/comparison/bear/source-new.mp4"> <video  width="360" src="assets/comparison/bear/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/comparison/bear/rave.mp4"> <video  width="360" src="assets/comparison/bear/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+          <th><a href="assets/ebsynth/bear/ebsynth.mp4"> <video  width="360" src="assets/ebsynth/bear/ebsynth.mp4" autoplay loop controls muted /> </a> </a></th>
+      </tr>
+</table>
+<table  width="1200" align="center">
+
+      <!-- <br/> -->
+      <!-- <tr> <td colspan="8"><br />
+        <p align="left"> Wild TI2I (Generated images) </p>
+        <hr>
+    </td> 
+        </tr> -->
+    <tr>
+      <tr>
+          <th style="font-family: Chalkduster;width:360px;">"a jeep moving at night"</th>
+          <th style="font-size: 16px">RAVE</th>
+          <th style="font-size: 16px">Ebsynth</th>
+      </tr>
+      <tr>
+          <th><a href="assets/comparison/car-turn/source-new.mp4"> <video  width="360" src="assets/comparison/car-turn/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/comparison/car-turn/rave.mp4"> <video  width="360" src="assets/comparison/car-turn/rave.mp4" autoplay loop controls muted /> </a> </a></th>
+          <th><a href="assets/ebsynth/car-turn/ebsynth-car-turn.mp4"> <video  width="360" src="assets/ebsynth/car-turn/ebsynth-car-turn.mp4" autoplay loop controls muted /> </a> </a></th>
+      </tr>
+</table>
+<!------------------ END SECTION ------------------>	
+
+
+
+
+
+
+
+
+
+<!------------------ BEGIN SECTION ------------------>
+<!------------------ User-Study ------------------>
+
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+
+<h2 id="user-study" align="left"><a name="image-results" id="image-results"></a>Examples of User Study</h2>
+
+Note that we formulate a metric as the frequency of each method chosen among the top two edits. 
+Below, we provide two examples from our user study, one selected as the best and the other not selected, in response to Question 1 with that metric. 
+We also provide the results of the user study (among 130 anonymous participants) for each question as histograms. Note that the colors of the titles correspond to the colors of the histograms.
+
+<p></p><b>Question 1 - General Editing: </b>Regarding the input video, which specific edits would you consider to be among the top two most successful in general?</p>
+<p><b>Question 2 - Temporal Consistency: </b> Regarding the modified videos below, select the top 2 that have the smoothest motion.</p>
+<p><b>Question 3 - Textual Alignment: </b> Which video best aligns with the text below?</p>
+<br/>
+
+<table  width="1200" align="center">
+  <tbody>
+    <tr>
+        <th style="font-family: Chalkduster;width: 240px;">"a cheetah is moving"</th>
+        <th style="font-size: 16px;width: 320px;">Q1 - General Editing</th>
+        <th style="font-size: 16px;width: 320px;">Q2 - Temporal Consistency</th>
+        <th style="font-size: 16px;width: 320px;">Q3 - Textual Alignment</th>
+    </tr>
+    <tr>
+        <th><a href="assets/user-study/cheetah/source-new.mp4">  <video  width="240" src="assets/user-study/cheetah/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/cheetah/user_study.svg">  <img  width="320" src="assets/user-study/cheetah/user_study.svg" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/cheetah/user_study2.svg">  <img  width="320" src="assets/user-study/cheetah/user_study2.svg" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/cheetah/user_study3.svg">  <img  width="320" src="assets/user-study/cheetah/user_study3.svg" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr>
+          <th style="font-size: 16px;width: 240px;color: #3366cc">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+          <th style="font-size: 16px;width: 240px;color: #dc3911;">RAVE</th>
+          <th style="font-size: 16px;width: 240px;color: #ff9900;">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+          <th style="font-size: 16px;width: 240px;color: #0d9618;">Rerender (<a href="#ref-rerender">[3]</a>)</th>
+      </tr>
+      <tr>
+          <th><a href="assets/user-study/cheetah/text2video.mp4">  <video  width="240" src="assets/user-study/cheetah/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/cheetah/rave.mp4">  <video  width="240" src="assets/user-study/cheetah/rave.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/cheetah/tokenflow.mp4">  <video  width="240" src="assets/user-study/cheetah/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/cheetah/rerender.mp4">  <video  width="240" src="assets/user-study/cheetah/rerender.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<hr style="border: 1px dashed;background-color: black;">
+<table  width="1200" align="center">
+  <tbody>
+    <tr>
+        <th style="font-family: Chalkduster;width: 240px;">"boats floating on the sea, villas on the coastal"</th>
+        <th style="font-size: 16px;width: 320px;">Q1 - General Editing</th>
+        <th style="font-size: 16px;width: 320px;">Q2 - Temporal Consistency</th>
+        <th style="font-size: 16px;width: 320px;">Q3 - Textual Alignment</th>
+    </tr>
+    <tr>
+        <th><a href="assets/user-study/dome/source-new.mp4">  <video  width="240" src="assets/user-study/dome/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/dome/user_study.svg">  <img  width="320" src="assets/user-study/dome/user_study.svg" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/dome/user_study2.svg">  <img  width="320" src="assets/user-study/dome/user_study2.svg" autoplay loop controls muted/> </a> </a></th>
+        <th><a href="assets/user-study/dome/user_study3.svg">  <img  width="320" src="assets/user-study/dome/user_study3.svg" autoplay loop controls muted/> </a> </a></th>
+      </tr>
+      <tr>
+          <th style="font-size: 16px;width: 240px;color: #3366cc">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
+          <th style="font-size: 16px;width: 240px;color: #dc3911;">RAVE</th>
+          <th style="font-size: 16px;width: 240px;color: #ff9900;">Rerender (<a href="#ref-rerender">[3]</a>)</th>
+          <th style="font-size: 16px;width: 240px;color: #0d9618;">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
+      </tr>
+      <tr>
+          <th><a href="assets/user-study/dome/text2video.mp4">  <video  width="240" src="assets/user-study/dome/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/dome/rave.mp4">  <video  width="240" src="assets/user-study/dome/rave.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/dome/rerender.mp4">  <video  width="240" src="assets/user-study/dome/rerender.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/user-study/dome/tokenflow.mp4">  <video  width="240" src="assets/user-study/dome/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<!------------------ END SECTION ------------------>	
+
+
+
+
+
+
+
+
+<!------------------ BEGIN SECTION ------------------>
+<!------------------ Limitations ------------------>
+
+<!-- <p>&nbsp;</p> -->
+<hr style="height:3px">
+
+<h2 id="limitations" align="left"><a name="limitations" id="image-results"></a>Limitations</h2>
+
+<h3>Extreme shape editing in long videos</h3>
+
+
+
+While our method can handle extreme shape edits successfully, it encounters 
+limitations when performing extreme shape edits as the video length increases. In particular,
+ the ability of our method to maintain the distinct shape of these extreme objects weakens, resulting 
+ in some flickering. It's noteworthy that in cases of extreme editing, such as with the car-turn example, 
+ our method effectively manages shape transformations for up to 27 frames, beyond which the quality of the 
+ edit starts to degrade. This 27-frame threshold is significant as it represents the upper limit of the editing 
+ capabilities of many competing methods, such as FLATTEN (<a href="#ref-flatten">[6]</a>) (on RTX4090), for similar tasks.
+
+
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="font-family: Chalkduster;width: 300px;">"classic car"</th>
+          <th style="font-size: 16px;width: 300px;">27 Frames</th>
+          <th style="font-size: 16px;width: 300px;">45 Frames</th>
+          <th style="font-size: 16px;width: 300px;">45 Frames + Deflickering (<a href="#ref-deflicker">[11]</a>)</th>
+      </tr>
+      <tr>
+          <th><a href="assets/limitations/car/source-new.mp4">  <video  width="300" src="assets/limitations/car/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/limitations/car/short-car-shape.mp4">  <video  width="300" src="assets/limitations/car/short-car-shape.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/limitations/car/long-car-shape.mp4">  <video  width="300" src="assets/limitations/car/long-car-shape.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/limitations/car/long-deflicker.mp4">  <video  width="300" src="assets/limitations/car/long-deflicker.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+
+<h3>Fine details flickering</h3>
+
+
+
+Certain extreme shape editings (e.g., transforming the wolf into 'a unicorn') require high-frequency 
+edits in the video (such as long and rich hair details of the unicorn). In such cases, flickering may 
+occur as our model does not explicitly utilize pixel-level methods to address video deflickering. 
+Furthermore, the unavoidable losses incurred during the compression in the encoding/decoding steps of
+ latent diffusion models and the selection of inversion methods (DDIM inversion in our case) impact 
+ the quality of reconstructing fine details. Note that this is a common challenge present in existing 
+ approaches as well. 
+
+<table  width="1200" align="center">
+  <tbody>
+
+      <tr>
+          <th style="width: 300px;">Input Video</th>
+          <th style="font-family: Chalkduster;font-size: 16px;width: 300px;">"a unicorn"</th>
+      </tr>
+      <tr>
+          <th><a href="assets/Fig1-teaser/wolf/wolf_source-new.mp4">  <video  width="300" src="assets/Fig1-teaser/wolf/wolf_source-new.mp4" autoplay loop controls muted/> </a> </a></th>
+          <th><a href="assets/limitations/unicorn.mp4">  <video  width="300" src="assets/limitations/unicorn.mp4" autoplay loop controls muted/> </a> </a></th>
+        </tr>
+      <tr> <td><br /></td> </tr>
+  </tbody>
+</table>
+<!------------------ END SECTION ------------------>	
+
+
+
+
+
+  <p><br>
+  </p>
+  <!-- <p>&nbsp;</p> -->
+  <!-- <p>&nbsp;</p> -->
+  <p>&nbsp;</p>
+
+
+  <p>
+    <a name="ref-tokenflow" id="ref-tokenflow"></a>
+    [1] Michal Geyer, Omer Bar-Tal, Shai Bagon, and Tali Dekel. Tokenflow: Consistent diffusion features for consistent video editing. arXiv preprint arXiv:2307.10373, 2023.
+  </p>
+  <p>
+    <a name="ref-fatezero" id="ref-fatezero"></a>
+    [2] Chenyang QI, Xiaodong Cun, Yong Zhang, Chenyang Lei, Xintao Wang, Ying Shan, and Qifeng Chen. Fatezero: Fusing attentions for zero-shot text-based video editing. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 15932–15942, 2023.
+  </p>
+  <p>
+    <a name="ref-rerender" id="ref-rerender"></a>
+    [3] Shuai Yang, Yifan Zhou, Ziwei Liu, , and Chen Change Loy. Rerender a video: Zero-shot text-guided video-to-video translation. In ACM SIGGRAPH Asia Conference Proceedings, 2023.
+  </p>
+  <p>
+    <a name="ref-t2v" id="ref-t2v"></a>
+    [4] Levon Khachatryan, Andranik Movsisyan, Vahram Tadevosyan, Roberto Henschel, Zhangyang Wang, Shant Navasardyan, and Humphrey Shi. Text2video-zero: Text-to-image diffusion models are zero-shot video generators. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 15954–15964, 2023.
+  </p>
+  <p>
+    <a name="ref-p2v" id="ref-p2v"></a>
+    [5] Duygu Ceylan, Chun-Hao P Huang, and Niloy J Mitra. Pix2video: Video editing using image diffusion. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 23206–23217, 2023.
+  </p>
+  <p>
+    <a name="ref-flatten" id="ref-flatten"></a>
+    [6] Yuren Cong, Mengmeng Xu, Christian Simon, Shoufa Chen, Jiawei Ren, Yanping Xie, Juan-Manuel Perez-Rua, Bodo Rosenhahn, Tao Xiang, and Sen He. FLATTEN: optical flow-guided attention for consistent text-to-video editing. arXiv preprint arXiv:2310.05922, 2023.
+  </p>
+  <p>
+    <a name="ref-tav" id="ref-tav"></a>
+    [7] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Stan Weixian Lei, Yuchao Gu, Yufei Shi, Wynne Hsu, Ying Shan, Xiaohu Qie, and Mike Zheng Shou. Tune-a-video: One-shot tuning of image diffusion models for text-to-video generation. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 7623–7633, 2023.
+  </p>
+  <p>
+    <a name="ref-control" id="ref-control"></a>
+    [8] Yabo Zhang, Yuxiang Wei, Dongsheng Jiang, Xiaopeng Zhang, Wangmeng Zuo, and Qi Tian. Controlvideo: Training-free controllable text-to-video generation. arXiv preprint arXiv:2305.13077, 2023
+  </p>
+  <p>
+    <a name="ref-gen1" id="ref-gen1"></a>
+    [9] Esser, Patrick, Johnathan Chiu, Parmida Atighehchian, Jonathan Granskog, and Anastasis Germanidis. "Structure and content-guided video synthesis with diffusion models." In Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 7346-7356. 2023.
+  </p>
+  <p>
+    <a name="ref-ebsynth" id="ref-ebsynth"></a>
+    [10] Ondrej Jamriska. Ebsynth: Fast example-based image synthesis and style transfer, 2018
+  </p>
+  <p>
+    <a name="ref-deflicker" id="ref-deflicker"></a>
+    [11] Lei, Chenyang, Xuanchi Ren, Zhaoxiang Zhang, and Qifeng Chen. "Blind Video Deflickering by Neural Filtering with a Flawed Atlas." In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 10439-10448. 2023.
+  </p>
 </div>
 
-
-
-<script>
-  window.onload = function () {
-    // Sync function
-    function syncVideos(master, slaves) {
-      master.addEventListener('play', () => {
-        slaves.forEach(video => {
-          video.currentTime = master.currentTime;
-          video.play();
-        });
-      });
-
-      master.addEventListener('pause', () => {
-        slaves.forEach(video => video.pause());
-      });
-
-      master.addEventListener('seeked', () => {
-        slaves.forEach(video => {
-          video.currentTime = master.currentTime;
-        });
-      });
-    }
-
-    // Sync setup for all masters
-    document.querySelectorAll('[id^="master"]').forEach(masterVideo => {
-      const masterId = masterVideo.getAttribute('id');
-      const slaveVideos = Array.from(document.querySelectorAll(`[data-master-id="${masterId}"]`));
-      syncVideos(masterVideo, slaveVideos);
-    });
-  };
-  
-</script>
-
-</body>
-
-</html>
-
-<style>
-  .videoContainer {
-    position: relative;
-    width: 300px;
-    height: auto;
-  }
-
-  .videoContainer video.mainVideo {
-    width: 100%;
-    height: auto;
-  }
-
-  .videoContainer video.overlayVideoUpperRight {
-    position: absolute;
-    top: 0;
-    left: 70%;
-    width: 30%; /* Adjust this value to make video2 smaller or larger */
-  }
-
-  .videoContainer video.overlayVideoLowerRight {
-    position: absolute;
-    top: 0;
-    left: 70%;
-    width: 30%; /* Adjust this value to make video2 smaller or larger */
-  }
-</style>
+</body></html>
