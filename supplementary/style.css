@@ -72,6 +72,8 @@ hr {
     display: inline-block;
     position: relative;
     width: 48%;
+    flex: 1; /* 每个视频容器都有相等的空间 */
+    margin: 0 10px; /* 根据需要调整，为视频之间提供间隙 */
     /* height: 350px; /* Set the desired width */
     /* padding-bottom: 350px; */
     /* overflow: hidden; */
@@ -192,3 +194,15 @@ hr {
   .video-warpper-wide:hover .overlay-text {
     opacity: 1;
   }
+
+table {
+  width: 1200px;
+  margin: 0 auto; /* 使表格居中显示 */
+}
+
+/* 应用到包含视频的行 */
+tr {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中（如果行高足够） */
+}
