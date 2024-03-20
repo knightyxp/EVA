@@ -4,11 +4,49 @@
 </style>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>EVA: Zero-shot Accurate Attributes and Multi-Object Video Editing</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Table with Arrow Buttons</title>
+    <style>
+      .scrollable-table-container {
+          display: flex;
+          align-items: center;
+      }
+      #scrollableTableWrapper {
+          overflow-x: auto;
+          overflow-y: hidden;
+          white-space: normal;
+          
+      }
+      table {
+          border-collapse: collapse;
+          margin: auto;
+      }
+      th.sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #F1FAFA;
+      }    
+      th.sticky-second {
+        position: sticky;
+        left: 302px;
+        z-index: 1;
+        background-color: #F1FAFA;
+      }
+      .video-no-container video::-webkit-media-controls {
+        display: none !important;
+      }
+    </style>
+  </head>
 
 <body>
 	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 100px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
