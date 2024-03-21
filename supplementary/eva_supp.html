@@ -62,10 +62,10 @@
     <li><a href="./eva_supp.html#single-object" style="font-size:x-large">Single-Object </a></li><br>
     <li><a href="./eva_supp.html#multi-object" style="font-size:x-large">Multi-Object</a></li><br>
   </ul>
-	<li><a href="#fig7" style="font-size:x-large"> Qualitative Multi-Attribute Editing Comparison </a></li><br>
+	<li><a href="#fig7" style="font-size:x-large"> Qualitative Comparison </a></li><br>
   <ul>
-    <li><a href="./eva_supp.html#comp_single" style="font-size:x-large">Compare to Previous Methods on Single Object</a></li><br>
-    <li><a href="./eva_supp.html#comp_multi" style="font-size:x-large">Compare to Previous Methods on Multi-Object</a></li><br>
+    <li><a href="./eva_supp.html#comp_single" style="font-size:x-large">Compare on Single Object</a></li><br>
+    <li><a href="./eva_supp.html#comp_multi" style="font-size:x-large">Compare on Multi-Object</a></li><br>
   </ul>
   <li><a href="#ablation" style="font-size:x-large">Ablation Studies</a></li><br>
   <ul> 
@@ -554,41 +554,39 @@
   </ul>
 
   <p style="font-size: large" width="1200">  
-    For fairness, all baselines are equipped with ControlNet pose guidance.
+    For fairness, all compared methods are equipped with ControlNet pose guidance.<br>
     In comparison with previous methods, EVA can achieves <a style="color: red;">accurate text-to-attribute control </a> while <a style="color: green;">avoiding attention leakage</a>.  
   </p>
 
   <p>&nbsp;</p>
-  <p style="font-family: caveat;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
+  <p style="font-family: caveat; font-size: large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
   <p>&nbsp;</p>
 
-  <div class="scrollable-table-container" id="comp_previous">
+  <h2 id="#comp_single" align="left">1. Compare on Single Object</h2>
+
+  <div class="scrollable-table-container">
     <div id="scrollableTableWrapper">
       <table width="1200" align="center" class="video-no-container">
             <tbody>
               <tr>
                 <th class="sticky">Source Video</th>
-                <th class="sticky-second">VideoSwap (Ours)</th>
-                <th>Rerender-A-Video</th>
-                <th>TokenFlow</th>
-                <th>Text2Video-Zero</th>
-                <th>StableVideo</th>
-                <th>Tune-A-Video</th>
+                <th class="sticky-second">EVA (Ours)</th>
                 <th>FateZero</th>
+                <th>ControlVideo</th>
+                <th>TokenFlow</th>
+                <th>Ground-A-Video</th>
               </tr>
 
               <tr>
-                <th class="sticky"><video id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/source_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th class="sticky-second"><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/videoswap_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/rerender_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tokenflow_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/t2v_zero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/stablevideo_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tune_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/fatezero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky"><video id="master15" width="300" src="./compare_videos/tennis/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky-second"><video data-master-id="master15" width="300" src="./compare_videos/tennis/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./compare_videos/tennis/fatezero_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./compare_videos/tennis/controlvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./compare_videos/tennis/tokenflow_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./compare_videos/tennis/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
-        
-              <tr>
+              <div class="has-text-centered" >Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"</div>        
+              <!-- <tr>
                 <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
                 <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
                 <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
@@ -597,7 +595,7 @@
                 <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
                 <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
                 <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
-              </tr>
+              </tr> -->
 
               <tr>
                 <th class="sticky"><video id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
