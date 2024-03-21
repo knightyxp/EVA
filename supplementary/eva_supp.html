@@ -229,6 +229,67 @@
 <p>&nbsp;</p>
 
 
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3  hr-lines">Examples From Dataset</h2>
+          <p> To view the original video, hover your mouse over the video.</p>
+          <h3 style="font-size: 1.5rem;text-align: center;font-weight:800;margin-bottom:0">Type of Edits</h2>
+          <hr style="width: 40%;left: 30%;"/>
+          <div class="content has-text-justified" style="display: contents;">
+          
+          <div style="display: flex;"> 
+            <div class="column" style="width: 24.5%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="compare_videos/running_two_man/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 24.5%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto"class="hover-video" src="compare_videos/running_two_man/eva_3.mp4" preload="metadata" autoplay loop muted> </video>
+                <video preload="auto"class="default-video" src="./qualitative_results/swap_identity/running_twoman_swap.mp4" preload="metadata" autoplay controls loop muted></video>
+              </div>
+            </div>
+            <div class="column" style="width: 24.5%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="compare_videos/bike-3/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 24.5%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto"class="hover-video" src="compare_videos/bike-3/eva_3.mp4" preload="metadata" autoplay loop muted> </video>
+                <video preload="auto"class="default-video" src="compare_videos/bike-3/bike-3-swap-identity.mp4" preload="metadata" autoplay controls loop muted></video>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; font-size: larger;font-weight:400"> 
+            <div class="column" style="width: 19.5%;">
+              <p class="prompt">"A man wearing a glitter jacket is typing"</p>
+            </div>
+            <div class="column" style="width: 19.5%;">
+              <p class="prompt">"Watercolor style"</p>
+            </div>
+            <div class="column" style="width: 19.5%;">
+              <p class="prompt">"A monkey is playing on the coast"</p>
+            </div>
+            <div class="column" style="width: 19.5%;">
+              <p class="prompt">"A dinosaur"</p>
+            </div>
+            <div class="column" style="width: 19.5%;">
+              <p class="prompt">"A tractor"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <div class="scrollable-table-container" align="center">
   <div id="scrollableTableWrapper" align="center">
       <table width="1200" align="center" class="video-no-container">
@@ -373,137 +434,142 @@
   </div>
 
 </div>
-
+  <!------------------ END SECTION ------------------>
 
 
   <!------------------ BEGIN SECTION ------------------>
-  <!------------------ FIG7 ------------------>
+  <p>&nbsp;</p>
+  <hr>
 
+  <h2 id="comparison_container" align="center">Qualitative Comparison</h2>
 
-  <hr style="height:3px">
-	
-  <h2 id="fig7" align="left"><a name="image-results" id="image-results"></a>Comparisons to Baselines - Figure 7</h2>
+  <h3 id="comp_prev" align="left">1. Compare to Previous Video-Editing Methods</h3>
 
-  Here we put the complete videos of the images shown in Figure 7. We compare our method with videos used by previous approaches from DAVIS (row 1, 2) and a human video (row 3). We perform comparison with
-  <ul>
-    <li> RAVE w/o Shuffle: our method without the shuffling step.</li>
-    <li> Tokenflow (<a href="#ref-tokenflow">[1]</a>)</li>
-    <li> FateZero (<a href="#ref-fatezero">[2]</a>)</li>
-    <li> Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</li>
-    <li> Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</li>
-    <li> Pix2Video (<a href="#ref-p2v">[5]</a>)</li>
+  <p style="font-size: large" width="1000">  
+  We compare VideoSwap with following video-editing methods: 
+  </p>
+
+  <ul style="font-size: large">
+    <li>Dense Correpondence: Rerender-A-Video <a href="#ref-rerender">[1]</a>, TokenFlow <a href="#ref-tokenflow">[2]</a>, Text2Video-Zero <a href="#ref-t2vzero">[3]</a>, StableVideo <a href="#ref-stablevideo">[4]</a></li>
+    <li>Implicit Motion Encoding: Tune-A-Video <a href="#ref-tav">[5]</a>, FateZero <a href="#ref-fatezero">[6]</a> </li>
   </ul>
-  Note that we do not use any customized model (Realistic Vision v5.1) in videos below for fair comparison. Stable Diffusion v1.5 is used for RAVE.
-  <table  width="1200" align="center">
-        <!-- <th>A</th>
-        <th>B</th>
-        <th>C</th> -->
-        <!-- <br/> -->
-        <!-- <tr> <td colspan="8"><br />
-          <p align="left"> Wild TI2I (Generated images) </p>
-          <hr>
-      </td> 
-          </tr> -->
-      <tr>
-        <tr>
-            <th style="font-family: Chalkduster;width:280px;">"Mysterious purple and blue hues dominate, with twinkling stars and a glowing moon in the backdrop"</th>
-            <th style="font-size: 14px">RAVE</th>
-            <th style="font-size: 14px">RAVE w/o Shuffle </th>
-            <th style="font-size: 14px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
-        </tr>
-        <tr>
-            <th><a href="assets/comparison/bear/source-new.mp4"> <video  width="280" src="assets/comparison/bear/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/bear/rave.mp4"> <video  width="280" src="assets/comparison/bear/rave.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/bear/no-shuffle.mp4"> <video  width="280" src="assets/comparison/bear/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/bear/tokenflow.mp4"> <video  width="280" src="assets/comparison/bear/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
-          </tr>
-          <tr>
-            <th style="font-size: 14px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
-            <th style="font-size: 14px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
-            <th style="font-size: 14px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
-            <th style="font-size: 14px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
-        </tr>
-          <tr>
-            <th><a href="assets/comparison/bear/fatezero.mp4"> <video  width="280" src="assets/comparison/bear/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/bear/rerender.mp4"> <video  width="280" src="assets/comparison/bear/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/bear/text2video.mp4"> <video  width="280" src="assets/comparison/bear/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/bear/pix2video.mp4"> <video  width="280" src="assets/comparison/bear/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
-         </tr>
-  </table>
-  <hr style="border: 1px dashed;background-color: black;">
-  <table  width="1200" align="center">
-        <!-- <th>A</th>
-        <th>B</th>
-        <th>C</th> -->
-        <!-- <br/> -->
-        <!-- <tr> <td colspan="8"><br />
-          <p align="left"> Wild TI2I (Generated images) </p>
-          <hr>
-      </td> 
-          </tr> -->
-      <tr>
-        <tr>
-            <th style="font-family: Chalkduster;width:280px;">"a jeep moving at night"</th>
-            <th style="font-size: 14px">RAVE</th>
-            <th style="font-size: 14px">RAVE w/o Shuffle </th>
-            <th style="font-size: 14px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
-        </tr>
-        <tr>
-            <th><a href="assets/comparison/car-turn/source-new.mp4"> <video  width="280" src="assets/comparison/car-turn/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/rave.mp4"> <video  width="280" src="assets/comparison/car-turn/rave.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/no-shuffle.mp4"> <video  width="280" src="assets/comparison/car-turn/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/tokenflow.mp4"> <video  width="280" src="assets/comparison/car-turn/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
-          </tr>
-          <tr>
-            <th style="font-size: 14px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
-            <th style="font-size: 14px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
-            <th style="font-size: 14px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
-            <th style="font-size: 14px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
-        </tr>
-          <tr>
-            <th><a href="assets/comparison/car-turn/fatezero.mp4"> <video  width="280" src="assets/comparison/car-turn/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/rerender.mp4"> <video  width="280" src="assets/comparison/car-turn/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/text2video.mp4"> <video  width="280" src="assets/comparison/car-turn/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/car-turn/pix2video.mp4"> <video  width="280" src="assets/comparison/car-turn/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
-         </tr>
-  </table>
-  <hr style="border: 1px dashed;background-color: black;">
-  <table  width="1200" align="center">
-        <!-- <th>A</th>
-        <th>B</th>
-        <th>C</th> -->
-        <!-- <br/> -->
-        <!-- <tr> <td colspan="8"><br />
-          <p align="left"> Wild TI2I (Generated images) </p>
-          <hr>
-      </td> 
-          </tr> -->
-      <tr>
-        <tr>
-            <th style="font-family: Chalkduster;width:280px;">"a senior lady is running"</th>
-            <th style="font-size: 14px">RAVE</th>
-            <th style="font-size: 14px">RAVE w/o Shuffle </th>
-            <th style="font-size: 14px">Tokenflow (<a href="#ref-tokenflow">[1]</a>)</th>
-        </tr>
-        <tr>
-            <th><a href="assets/comparison/woman-running/source-new.mp4"> <video  width="280" src="assets/comparison/woman-running/source-new.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/rave.mp4"> <video  width="280" src="assets/comparison/woman-running/rave.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/no-shuffle.mp4"> <video  width="280" src="assets/comparison/woman-running/no-shuffle.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/tokenflow.mp4"> <video  width="280" src="assets/comparison/woman-running/tokenflow.mp4" autoplay loop controls muted/> </a> </a></th>
-          </tr>
-          <tr>
-            <th style="font-size: 14px">FateZero (<a href="#ref-fatezero">[2]</a>)</th>
-            <th style="font-size: 14px">Rerender-A-Video (<a href="#ref-rerender">[3]</a>)</th>
-            <th style="font-size: 14px">Text2Video-Zero (<a href="#ref-t2v">[4]</a>)</th>
-            <th style="font-size: 14px">Pix2Video (<a href="#ref-p2v">[5]</a>)</th>
-        </tr>
-          <tr>
-            <th><a href="assets/comparison/woman-running/fatezero.mp4"> <video  width="280" src="assets/comparison/woman-running/fatezero.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/rerender.mp4"> <video  width="280" src="assets/comparison/woman-running/rerender.mp4" autoplay loop controls muted /> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/text2video.mp4"> <video  width="280" src="assets/comparison/woman-running/text2video.mp4" autoplay loop controls muted/> </a> </a></th>
-            <th><a href="assets/comparison/woman-running/pix2video.mp4"> <video  width="280" src="assets/comparison/woman-running/pix2video.mp4" autoplay loop controls muted/> </a> </a></th>
-         </tr>
-  </table>
+
+  <p style="font-size: large" width="1200">  
+    We utilize pre-defined concepts in the pretrained model and retrieve several images for shape reference. 
+    In comparison with previous methods, VideoSwap can <a style="color: red;">reveal the correct shape of a given concept</a> while aligning the motion of the source video.  
+  </p>
+
+  <p>&nbsp;</p>
+  <p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
+  <p>&nbsp;</p>
+
+  <div class="scrollable-table-container" id="comp_previous">
+    <div id="scrollableTableWrapper">
+      <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th class="sticky">Source Video</th>
+                <th class="sticky-second">VideoSwap (Ours)</th>
+                <th>Rerender-A-Video</th>
+                <th>TokenFlow</th>
+                <th>Text2Video-Zero</th>
+                <th>StableVideo</th>
+                <th>Tune-A-Video</th>
+                <th>FateZero</th>
+              </tr>
+
+              <tr>
+                <th class="sticky"><video id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/source_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky-second"><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/videoswap_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/rerender_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tokenflow_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/t2v_zero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/stablevideo_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/tune_a_video_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master15" width="300" src="./assets/qualitative_comp/comp_previous/3004_6_helicopter/fatezero_3004_6_helicopter.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+        
+              <tr>
+                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">airplane</a> flying above the clouds in the sky."</th>
+                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">airplane</a> -> <a style="color: purple;">helicopter</a></th>
+              </tr>
+
+              <tr>
+                <th class="sticky"><video id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/source_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky-second"><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/videoswap_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/rerender_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/tokenflow_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/t2v_zero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/stablevideo_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/tune_a_video_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master16" width="300" src="./assets/qualitative_comp/comp_previous/2003_6_duck/fatezero_2003_6_duck.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+        
+              <tr>
+                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">black swan</a> swimming in a pond."</th>
+                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">black swan</a> -> <a style="color: purple;">duck</a></th>
+              </tr>
+
+              <tr>
+                <th class="sticky"><video id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/3002_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky-second"><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/videoswap_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/rerender_a_video_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/tokenflow_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/t2v_zero_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/stablevideo_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/tune_a_video_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master21" width="300" src="./assets/qualitative_comp/comp_previous/3002_3_convertible/fatezero_3002_3_convertible.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+        
+              <tr>
+                <th width="300" class="sticky"> Source Prompt: "A <a style="color: blue; font-family: caveat; font-size: 22px;">silver jeep</a> driving down a curvy road in the countryside."</th>
+                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">silver jeep</a> -> <a style="color: purple;">convertible</a></th>
+              </tr>
+            
+              <tr>
+                <th class="sticky"><video id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/2005_source.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th class="sticky-second"><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/videoswap_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/rerender_a_video_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/tokenflow_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/t2v_zero_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/stablevideo_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/tune_a_video_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master22" width="300" src="./assets/qualitative_comp/comp_previous/2005_1_tiger/fatezero_2005_1_tiger.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+        
+              <tr>
+                <th width="300" class="sticky"> Source Prompt: "An <a style="color: blue; font-family: caveat; font-size: 22px;">elk</a> standing and turning its head in a field."</th>
+                <th class="sticky-second" style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;"  width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+                <th style="font-family: caveat; font-size: 25px;" width="300"> <a style="color: blue;">elk</a> -> <a style="color: purple;">tiger</a></th>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
   <!------------------ END SECTION ------------------>
 
 
