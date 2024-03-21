@@ -62,7 +62,7 @@
     <li><a href="./eva_supp.html#single-object" style="font-size:x-large">Single-Object </a></li><br>
     <li><a href="./eva_supp.html#multi-object" style="font-size:x-large">Multi-Object</a></li><br>
   </ul>
-	<li><a href="#fig7" style="font-size:x-large"> Qualitative Comparison </a></li><br>
+	<li><a href="./eva_supp.html/#comp_prev" style="font-size:x-large"> Qualitative Comparison </a></li><br>
   <ul>
     <li><a href="./eva_supp.html#comp_single" style="font-size:x-large">Compare on Single Object</a></li><br>
     <li><a href="./eva_supp.html#comp_multi" style="font-size:x-large">Compare on Multi-Object</a></li><br>
@@ -548,7 +548,7 @@
 
   <ul style="font-size: large">
     <li> FateZero<a href="#ref-fatezero">[1]</a>: preserving layout information using source video attention maps. </li>
-    <li> ControlVideo <a href="#ref-controlvideo">[2]</a>: achieving strict temporal consistency via optical-flow and ControlNet<a href="#ref-controlnet">[5] guidance</li>
+    <li> ControlVideo <a href="#ref-controlvideo">[2]</a>: achieving strict temporal consistency via optical-flow and ControlNet<a href="#ref-controlnet">[5]</a></li>
     <li> TokenFLow <a href="#ref-tokenflow">[3]</a>: enforcing a linear mix of nearest key-frame features to ensure consistency </li>
     <li> Ground-A-Video <a href="#ref-groundvideo">[4]</a>: leveraging word-to-bounding box control for multi-attribute editing</li>
   </ul>
@@ -586,11 +586,13 @@
                 <th><video data-master-id="master15" width="300" src="compare_videos/tennis/groundvideo_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
               <!-- <div class="has-text-centered" >Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"</div>         -->
-              <div class="has-text-centered" >
-                Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis 
-                on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> 
-                before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"
-              </div>
+              <tr>
+                <th colspan="4" class="sticky">
+                  Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis 
+                  on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> 
+                  before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"
+                </th>
+              </tr>
 
 
           </tbody>
