@@ -29,7 +29,7 @@
           border-collapse: collapse;
           margin: auto;
       }
-      /* th.sticky {
+      th.sticky {
         position: sticky;
         top: 0;
         left: 0;
@@ -41,7 +41,7 @@
         left: 302px;
         z-index: 1;
         background-color: #222222;
-      } */
+      }
       .video-no-container video::-webkit-media-controls {
         display: none !important;
       }
@@ -226,7 +226,7 @@
 <h2 id="multi-object" align="left">2. Multi-Object</h2>
 
 
-<p style="font-family:caveat; font-size: 20px;" align="center"> To view the <a style="color: red;"> swap identity video</a>, <a style="color: green;">hover your mouse </a> over the video.</p>
+<p style="font-family:caveat; font-size: 24px;" align="center"> To view the <a style="color: red;"> swap identity video</a>, <a style="color: green;">hover your mouse </a> over the video.</p>
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -266,10 +266,10 @@
             </div>
             <div class="column" style="width: 25%;">
               <p class="prompt">
-                left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+                left man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
                 right man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a> <br/>
-                background&rarr;<a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold; font-size: 14px;">frosty yellow leaves</a><br/>
-                swap background&rarr;<a style="color: purple; font-family: caveat; font-weight: bold; font-size: 14px;"> sphalt road with building under sky</a>
+                background &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold; font-size: 14px;">frosty yellow leaves</a><br/>
+                swap background &rarr; <a style="color: purple; font-family: caveat; font-weight: bold; font-size: 14px;">sphalt road with building under sky</a>
               </p>
             </div>
             <div class="column" style="width: 25%;">
@@ -277,10 +277,105 @@
             </div>
             <div class="column" style="width: 25%;">
               <p class="prompt">
-                left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+                left man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
                 right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Batman</a> <br/>
-                treess&rarr; <a style="color: rgb(234, 107, 102); font-family: caveat; font-weight: bold;">crimson maple trees</a><br/>
+                treess &rarr; <a style="color: rgb(234, 107, 102); font-family: caveat; font-weight: bold;">crimson maple trees</a><br/>
                 road &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">snow covered road</a>
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex;"> 
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="./compare_videos/basketball-3/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto"class="default-video" src="./compare_videos/basketball-3/eva-basketball-3-4cls.mp4" preload="metadata" autoplay controls loop muted></video>
+                <video preload="auto"class="hover-video" src="./compare_videos/basketball-3/eva-swap-identity.mp4" preload="metadata" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="./compare_videos/badminton/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto"class="default-video" src="./compare_videos/badminton/eva_3.mp4" preload="metadata" autoplay controls loop muted></video>
+                <video preload="auto"class="hover-video" src="./compare_videos/badminton/swap-identity.mp4" preload="metadata" autoplay loop muted> </video>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; font-size: medium; font-weight:400; text-align: center;"> 
+            <div class="column" style="width: 25%;">
+              <p class="prompt"> source Video</p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">
+                left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+                right man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Spider-Man</a> <br/>
+                ground &rarr;<a style="color: green; font-family: caveat; font-weight: bold;">grassland</a><br/>
+                blue sky &rarr;<a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">raining sky </a> </th>
+              </p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">source video</p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">
+                man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a> <br/>
+                woman &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Wonder Woman</a> <br/>
+                wall &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">charcoal grey wall </a>
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex;"> 
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="compare_videos/soap-box/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" src="compare_videos/soap-box/eva_3.mp4" autoplay controls loop muted></video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto" poster="" src="compare_videos/Loading/source_video.mp4" autoplay loop muted> </video>
+              </div>
+            </div>
+            <div class="column" style="width: 25%;">
+              <div class="video-wrapper" style="width: 100%;">
+                <video preload="auto"class="default-video" src="compare_videos/Loading/eva_new_3cls.mp4" preload="metadata" autoplay controls loop muted></video>
+                <video preload="auto"class="hover-video" src="compare_videos/Loading/swap_identity.mp4" preload="metadata" autoplay loop muted> </video>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; font-size: medium; font-weight:400; text-align: center;"> 
+            <div class="column" style="width: 25%;">
+              <p class="prompt"> source Video</p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">
+                back man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+                front man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Batman</a> <br/>
+                bridge, ground &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">snow covered</a>
+              </p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">source video</p>
+            </div>
+            <div class="column" style="width: 25%;">
+              <p class="prompt">
+                left man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+                right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Hulk</a> <br/>
+                store &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">cyberpunk cityspace </a> </th>
               </p>
             </div>
           </div>
@@ -291,12 +386,11 @@
 </section>
 
 
-
 <div class="scrollable-table-container" align="center">
   <div id="scrollableTableWrapper" align="center">
       <table width="1200" align="center" class="video-no-container">
         <tbody>
-          <tr>
+          <!-- <tr>
             <th><video id="master3" width="300" src="./compare_videos/running_two_man/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
             <th><video data-master-id="master3" width="300" src="./compare_videos/running_two_man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
             <th><video data-master-id="master3" width="300" src="./compare_videos/bike-3/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
@@ -395,11 +489,11 @@
             <th>
               <strong><a style="color: red;">Swap identity</a> </strong><br/>
             </th>
-          </tr>
+          </tr> -->
         
           <tr>
-            <th><video id="master6" width="300" src="./compare_videos/dance-1/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-            <th><video data-master-id="master6" width="300" src="./compare_videos/dance-1/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            <th class="sticky"><video id="master6" width="300" src="./compare_videos/dance-1/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            <th class="sticky-second"><video data-master-id="master6" width="300" src="./compare_videos/dance-1/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
             <th><video data-master-id="master6" width="300" src="./compare_videos/skateboard-two-man/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
             <th><video data-master-id="master6" width="300" src="./compare_videos/skateboard-two-man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
             <th><video data-master-id="master6" width="300" src="./compare_videos/basketball-dribbling/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>           
@@ -435,7 +529,7 @@
     
   </div>
 
-</div>
+</div> 
   <!------------------ END SECTION ------------------>
 
 
