@@ -540,20 +540,22 @@
 
   <h2 id="comparison_container" align="center">Qualitative Comparison</h2>
 
-  <h3 id="comp_prev" align="left">1. Compare to Previous Video-Editing Methods</h3>
+  <h3 id="comp_prev" align="left">Compare to Previous Video-Editing Methods</h3>
 
   <p style="font-size: large" width="1000">  
-  We compare VideoSwap with following video-editing methods: 
+  We compare EVA with following video-editing methods: 
   </p>
 
   <ul style="font-size: large">
-    <li>Dense Correpondence: Rerender-A-Video <a href="#ref-rerender">[1]</a>, TokenFlow <a href="#ref-tokenflow">[2]</a>, Text2Video-Zero <a href="#ref-t2vzero">[3]</a>, StableVideo <a href="#ref-stablevideo">[4]</a></li>
-    <li>Implicit Motion Encoding: Tune-A-Video <a href="#ref-tav">[5]</a>, FateZero <a href="#ref-fatezero">[6]</a> </li>
+    <li> FateZero<a href="#ref-fatezero">[1]</a>: preserving layout information using source video attention maps. </li>
+    <li> ControlVideo <a href="#ref-controlvideo">[2]</a>: achieving strict temporal consistency via optical-flow and ControlNet<a href="#ref-controlnet">[5] guidance</li>
+    <li> TokenFLow <a href="#ref-tokenflow">[3]</a>: enforcing a linear mix of nearest key-frame features to ensure consistency </li>
+    <li> Ground-A-Video <a href="#ref-groundvideo">[4]</a>: leveraging word-to-bounding box control for multi-attribute editing</li>
   </ul>
 
   <p style="font-size: large" width="1200">  
-    We utilize pre-defined concepts in the pretrained model and retrieve several images for shape reference. 
-    In comparison with previous methods, VideoSwap can <a style="color: red;">reveal the correct shape of a given concept</a> while aligning the motion of the source video.  
+    For fairness, all baselines are equipped with ControlNet pose guidance.
+    In comparison with previous methods, EVA can <a style="color: red;">reveal the correct shape of a given concept</a> while aligning the motion of the source video.  
   </p>
 
   <p>&nbsp;</p>
