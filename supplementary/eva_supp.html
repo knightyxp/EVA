@@ -62,7 +62,7 @@
     <li><a href="./eva_supp.html#single-object" style="font-size:x-large">Single-Object </a></li><br>
     <li><a href="./eva_supp.html#multi-object" style="font-size:x-large">Multi-Object</a></li><br>
   </ul>
-	<li><a href="./eva_supp.html/#comp_prev" style="font-size:x-large"> Qualitative Comparison </a></li><br>
+	<li><a href="./eva_supp.html/#qualitative_compare" style="font-size:x-large"> Qualitative Comparison </a></li><br>
   <ul>
     <li><a href="./eva_supp.html#comp_single" style="font-size:x-large">Compare on Single-Object</a></li><br>
     <li><a href="./eva_supp.html#comp_multi" style="font-size:x-large">Compare on Multi-Object</a></li><br>
@@ -78,8 +78,8 @@
     <li><a href="./eva_supp.html#compare_modulated_attn" style="font-size:x-large"> Compare with Modulated Attn </a></li><br>
     <li><a href="./eva_supp.html#compare_sc_layout_attn" style="font-size:x-large"> Compare wit Sparse-Casual Layout Attn </a></li><br>
   </ul>
-  <li><a href="#mask-source" style="font-size:x-large">Why Acquire Layout Masks from SAM-Track? </a></li><br>
-  <li><a href="#decouple-motion-identity" style="font-size:x-large">Decouple Motion and Identity</a></li><br>
+  <!-- <li><a href="#mask-source" style="font-size:x-large">Why Acquire Layout Masks from SAM-Track? </a></li><br>
+  <li><a href="#decouple-motion-identity" style="font-size:x-large">Decouple Motion and Identity</a></li><br> -->
   </ul>
 	
     <!------------------ BEGIN SECTION ------------------>
@@ -226,7 +226,7 @@
 <h2 id="multi-object" align="left">2. Multi-Object</h2>
 
 
-<p style="font-family:caveat; font-size: 24px;" align="center"> To view the <a style="color: red;"> swap identity video</a>, <a style="color: green;">hover your mouse </a> over the video.</p>
+<p style="font-family:caveat; font-size: x-large;" align="center"> To view the <a style="color: red;"> swap identity video</a>, <a style="color: green;">hover your mouse </a> over the video.</p>
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -437,9 +437,7 @@
   <p>&nbsp;</p>
   <hr>
 
-  <h2 id="comp_prev" align="center">Qualitative Comparison</h2>
-
-  <h3 id="" align="left">Compare to Previous Video-Editing Methods</h3>
+  <h2 id="qualitative_compare" align="center">Qualitative Comparison</h2>
 
   <p style="font-size: large" width="1000">  
   We compare EVA with following video-editing methods: 
@@ -458,7 +456,7 @@
   </p>
 
   <p>&nbsp;</p>
-  <p style="font-family: caveat; font-size: large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
+  <p style="font-family: caveat; font-size: x-large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
   <p>&nbsp;</p>
 
   <h2 id="comp_single" align="left">1. Compare on Single-Object</h2>
@@ -547,7 +545,7 @@
   </div>
 
   <p>&nbsp;</p>
-  <p style="font-family: caveat; font-size: large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
+  <p style="font-family: caveat; font-size: x-large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
   <p>&nbsp;</p>
 
   <h2 id="comp_multi" align="left">2. Compare on Multi-Object</h2>
@@ -772,8 +770,8 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
     
     <tr>
       <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-        man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a> <br/>
-        woman &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Wonder Woman</a> <br/>
+        man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a>,
+        woman &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Wonder Woman</a>,
         wall &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">charcoal grey wall </a>
       </th>
     </tr>   
@@ -786,7 +784,7 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
     
     <tr>
       <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>,
         right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider Man</a> <br/>
       </th>
     </tr>   
@@ -797,9 +795,8 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
 
 <p style="font-size: large;"> 
   We expand the receptive field for positive/negative values to include sparse frames, targeting the first and the preceding frame. 
-  SC-Layout Attn enhances Per-frame Layout Attention. However, it also has limitations such as attention leakage and appearance inconsistency due to:<br>
-  <a style="color: red;">(1) Limited receptive field for negative values,<br>
-  (2) Reduced interaction across full frames. </a>
+  SC-Layout Attn enhances Per-frame Layout Attention. However, it also has limitations such as <a style="color: red;"> attention leakage and appearance inconsistency </a> due to:
+  (1) <a style="color: green;">Limited receptive field for negative values </a> and (2) <a style="color: green;">Reduced interaction across full frames </a>.
 </p>
 
 <table width="1200" align="center" class="video-no-container">
@@ -818,8 +815,8 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
     
     <tr>
       <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
-        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Batman</a> <br/>
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>,
+        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Batman</a>,
         trees&rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">golden ginkgo trees </a> </th>
       </th>
     </tr>   
@@ -832,8 +829,8 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
     
     <tr>
       <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
-        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider Man</a> <br/>
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>,
+        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider Man</a>,
         trees, ground &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">frosty yellow leaves</a>
       </th>
     </tr>   
