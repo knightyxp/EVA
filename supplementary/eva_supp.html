@@ -73,10 +73,13 @@
     <li><a href="./eva_supp.html#controlnet" style="font-size:x-large">W/o ControlNet pose guidance</a></li><br>
     <li><a href="./eva_supp.html#ST_Layout_Attn" style="font-size:x-large">W/o ST Layout Attn</a></li><br>
   </ul>
-  <li><a href="./eva_supp.html#SC-Layout Attn" style="font-size:x-large">Compare to Sparse-Causal Layout Attn</a></li><br>
-  <li><a href="#mask-source" style="font-size:x-large">Why acquire layout masks from SAM-Track? </a></li><br>
-  <li><a href="#decouple-motion-identity" style="font-size:x-large">Decouple motion and identity</a></li><br>
-  <li><a href="#limitations" style="font-size:x-large">Limitations</a></li>
+  <li><a href="./eva_supp.html#compare-layout-attn" style="font-size:x-large">Compare with Different Layout Attention</a></li><br>
+  <ul> 
+    <li><a href="./eva_supp.html#compare_modulated_attn" style="font-size:x-large"> Compare with Modulated Attn </a></li><br>
+    <li><a href="./eva_supp.html#compare_sc_layout_attn" style="font-size:x-large"> Compare wit Sparse-Casual Layout Attn </a></li><br>
+  </ul>
+  <li><a href="#mask-source" style="font-size:x-large">Why Acquire Layout Masks from SAM-Track? </a></li><br>
+  <li><a href="#decouple-motion-identity" style="font-size:x-large">Decouple Motion and Identity</a></li><br>
   </ul>
 	
     <!------------------ BEGIN SECTION ------------------>
@@ -700,19 +703,19 @@
 
 
       <tr>
-        <th><video id="master11" width="240" src="compare_videos/badminton/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        <th ><video data-master-id="master11" width="240" src="ablation/badminton_3/wo_latent_blend.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        <th><video data-master-id="master11" width="240" src="ablation/badminton_3/wo_controlnet.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        <th><video data-master-id="master11" width="240" src="ablation/badminton_3/wo_layout_guidance.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-        <th><video data-master-id="master11" width="240" src="compare_videos/badminton/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        <th><video id="master11" width="240" src="compare_videos/Loading/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        <th ><video data-master-id="master11" width="240" src="ablation/loading_3/wo_latent_blend.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        <th><video data-master-id="master11" width="240" src="ablation/loading_3/wo_controlnet.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        <th><video data-master-id="master11" width="240" src="ablation/loading_3/wo_layout_guidance.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        <th><video data-master-id="master11" width="240" src="compare_videos/Loading/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
       </tr>
 
 
       <tr>
         <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-          back man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>, 
-          front man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Batman</a>
-          bridge, ground &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">snow covered</a>
+          left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>, 
+          right man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Hulk</a>
+          store &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">cyberpunk cityspace</a>
         </th>
       </tr>
 
@@ -726,9 +729,9 @@
 
       <tr>
         <th colspan="5" style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
-          man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a>, 
-          woman&rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Wonder Woman</a>,
-          wall &rarr;  <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold; ">charcoal grey wall</a>
+          back man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a>, 
+          front man &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">Batman</a>
+          bridge, ground &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">snow covered</a>
         </th>
       </tr>
 
@@ -738,28 +741,107 @@
 <!------------------ BEGIN SECTION ------------------>
 <p>&nbsp;</p>
 <hr>
-<h2 id="ablation_container" align="center">Compare with Sparse Casual Layout-guided Attention </h2>
+<h2 id="compare-layout-attn" align="center">Compare with Different Layout Attention</h2>
 
 <p style="font-size: large" width="1200"> 
-
-
-
-
-We ablate key design choices of our method - alternative loss functions (first row), the need of guidance during sampling and latent initialization strategy (second row).
-  In this section, we ablate key components of EVA, - 1. Modulated Attn Densediffusion 2. <br>
-  Please refer to <a style="color:red">Sec. 4.4</a> in the paper for more details.
+In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Layout Attn) with two differentn layout-guided attention. <br>
 </p>
 
-<h3 id="sparse_motion_feature" align="left">1. Sparse Motion Feature</h3>
+
+<h3 id="compare_modulated_attn" align="left">1. Compare to Modulated Attention  (Per-frame Layout Attention)</h3>
 
 <p style="font-size: large" width="1000"> 
-  To incorporate semantic points as correspondence, we generate sparse motion features by placing the projected DIFT-Embedding in an empty feature.
-  When compared to other point encoding variants, this method yields <a style="color: red;">superior motion alignment and video quality</a>, with <a style="color: red;">the least registration time-cost</a>.
+  We compare with the original Modulated Attention from Densediffusion<a href="#ref-densediffusion">[6]</a>.
+  To ensure fairness, we integrate DDIM Inversion and ControlNet for video editing and apply latent blending for background preservation.
+  Modulated Attention serves as per-frame Layout Attention, but applying T2I methods frame-by-frame leads to severe <a style="color: red;">attention leakage</a>.
 </p>
 
-<p>&nbsp;</p>
-<p style="font-family: Chalkduster;" align="center">Please <a style="color: red;">scroll right</a> for more comparisons.</p>
-<p>&nbsp;</p>
+<table width="1200" align="center" class="video-no-container">
+  <tbody>
+    <tr>
+      <th>Source Video</th>
+      <th>Modulted Attention</th>
+      <th>ST-Layout Attn</th>
+    </tr>
+
+    <tr>
+      <th><video id="master9" width="300" src="compare_videos/badminton/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th ><video data-master-id="master9" width="300" src="layout_compare/modulated_attn/badminton_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th><video data-master-id="master9" width="300" src="compare_videos/badminton/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+    </tr>
+    
+    <tr>
+      <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
+        man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Spider-Man</a> <br/>
+        woman &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Wonder Woman</a> <br/>
+        wall &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">charcoal grey wall </a>
+      </th>
+    </tr>   
+
+    <tr>
+      <th><video id="master9" width="300" src="compare_videos/running_two_man/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th ><video data-master-id="master9" width="300" src="layout_compare/modulated_attn/running_two_man_2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th><video data-master-id="master9" width="300" src="compare_videos/running_two_man/eva_2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+    </tr>
+    
+    <tr>
+      <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider Man</a> <br/>
+      </th>
+    </tr>   
+  </tbody>
+</table>
+
+<h3 id="compare_sc_layout_attn" align="left">2. Comparison with Sparse-Causal Layout-guided Attention (SC-Layout Attn)</h3>
+
+<p style="font-size: large;"> 
+  We expand the receptive field for positive/negative values to include sparse frames, targeting the first and the preceding frame. 
+  SC-Layout Attn enhances Per-frame Layout Attention. However, it also has limitations such as attention leakage and appearance inconsistency due to:<br>
+  <a style="color: red;">(1) Limited receptive field for negative values,<br>
+  (2) Reduced interaction across full frames. </a>
+</p>
+
+<table width="1200" align="center" class="video-no-container">
+  <tbody>
+    <tr>
+      <th>Source Video</th>
+      <th>SC-Layout Attn</th>
+      <th>ST-Layout Attn</th>
+    </tr>
+
+    <tr>
+      <th><video id="master9" width="300" src="compare_videos/badminton/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th ><video data-master-id="master9" width="300" src="layout_compare/sc_layout_attn/skateboard_twoman_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th><video data-master-id="master9" width="300" src="compare_videos/skateboard-two-man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+    </tr>
+    
+    <tr>
+      <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Batman</a> <br/>
+        trees&rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">golden ginkgo trees </a> </th>
+      </th>
+    </tr>   
+
+    <tr>
+      <th><video id="master9" width="300" src="compare_videos/running_two_man/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th ><video data-master-id="master9" width="300" src="layout_compare/sc_layout_attn/running_two_man_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+      <th><video data-master-id="master9" width="300" src="compare_videos/running_two_man/eva_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+    </tr>
+    
+    <tr>
+      <th colspan="5"  style="font-size: 18px; padding-top: 8px; padding-bottom: 8px;">
+        left man&rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Iron Man</a> <br/>
+        right man &rarr; <a style="color: rgb(102, 178, 255);; font-family: caveat; font-weight: bold;">Spider Man</a> <br/>
+        trees, ground &rarr; <a style="color: rgb(255, 217, 102); font-family: caveat; font-weight: bold;">frosty yellow leaves</a>
+      </th>
+    </tr>   
+  </tbody>
+</table>
+
+
+
 
 
 <!------------------ END SECTION ------------------>
