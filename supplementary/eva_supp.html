@@ -795,8 +795,9 @@ In this section, we compare our Spatial-Temporal Layout-Guided Attention (ST-Lay
 <h3 id="compare_sc_layout_attn" align="left">2. Comparison with Sparse-Causal Layout-guided Attention (SC-Layout Attn)</h3>
 
 <p style="font-size: large;"> 
-  We expand the receptive field for positive/negative values to include sparse frames, targeting the first and the preceding frame. 
-  SC-Layout Attn enhances Per-frame Layout Attention. However, it also has limitations such as <a style="color: red;"> attention leakage and appearance inconsistency </a> due to:
+  We expand the receptive field for positive/negative values from individual frames to include sparse frames, specifically the first and preceding frames. 
+  This approach, named Sparse-Causal Layout-guided Attention (SC-Layout Attn), can be viewed as a promotion of Per-frame Layout Attention.
+  However, it also has limitations such as <a style="color: red;"> attention leakage </a> and <a style="color: red;">appearance inconsistency </a> due to:
   (1) <a style="color: green;">Limited receptive field for negative values </a> and (2) <a style="color: green;">Reduced interaction across full frames </a>.
 </p>
 
