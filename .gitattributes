@@ -1,1 +1,2 @@
-/home/xianyang/Data/code/EVA/static/videos/EVA_supply_video.mp4 filter=lfs diff=lfs merge=lfs -text
+static/videos/EVA_supply_video.mp4 filter=lfs diff=lfs merge=lfs -text
+supplementary/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
